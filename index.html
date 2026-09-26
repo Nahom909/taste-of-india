@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- SEO-Grundwerte fuer Suchmaschinen und Link-Vorschauen. Die Seite ueberschreibt Titel und
+     Beschreibung beim Laden mit den Werten aus content.json ("seo"). -->
+<title>Taste of India Kassel | Indisches Restaurant in der Wolfhager Straße</title>
+<meta name="description" content="Butter Chicken, Lamm Biryani und Saag Paneer: indische Küche in der Wolfhager Straße in Kassel. Abholen, liefern lassen oder reservieren unter 0561 97010337.">
+<meta name="theme-color" content="#F3E9DA">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Taste of India Kassel">
+<meta property="og:description" content="Indische Küche in der Wolfhager Straße 415, Kassel. 4,7 Sterne bei Google.">
+<meta property="og:image" content="assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+<link rel="preload" href="assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="content.json" as="fetch" type="application/json" crossorigin>
+<link rel="preload" as="image" href="assets/img/hero-spices-m.webp" media="(max-width: 767px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img/hero-spices.webp" media="(min-width: 768px)" fetchpriority="high">
+<link rel="stylesheet" href="assets/css/style.css?v=20260926-9">
+<script>
+  /* Bewegung nur, wenn der Besucher sie nicht im System abgeschaltet hat */
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion-ok');
+</script>
+<!-- Erst die Inhalte, dann die Animationen -->
+<script src="assets/js/content-fallback.js?v=20260926-9" defer></script>
+<script src="assets/js/content.js?v=20260926-9" defer></script>
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/vendor/lenis.min.js" defer></script>
+<script src="assets/js/motion.js?v=20260926-9" defer></script>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <!-- UI-Icons: Phosphor Icons (MIT) -->
+<symbol id="i-phone" viewBox="0 0 256 256"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></symbol>
+<symbol id="i-navigation-arrow" viewBox="0 0 256 256"><path d="M237.33,106.21,61.41,41l-.16-.05A16,16,0,0,0,40.9,61.25a1,1,0,0,0,.05.16l65.26,175.92A15.77,15.77,0,0,0,121.28,248h.3a15.77,15.77,0,0,0,15-11.29l.06-.2,21.84-78,78-21.84.2-.06a16,16,0,0,0,.62-30.38ZM149.84,144.3a8,8,0,0,0-5.54,5.54L121.3,232l-.06-.17L56,56l175.82,65.22.16.06Z"/></symbol>
+<symbol id="i-shopping-bag" viewBox="0 0 256 256"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM176,88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z"/></symbol>
+<symbol id="i-arrow-up-right" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></symbol>
+<symbol id="i-star-fill" viewBox="0 0 256 256"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></symbol>
+<symbol id="i-clock" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></symbol>
+<symbol id="i-map-pin" viewBox="0 0 256 256"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></symbol>
+  <!-- Handgezeichnete Gewuerze -->
+  <symbol id="d-anise" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M28.6 22.1Q44.5 23.6 28.6 25.9Q38.8 38.4 25.9 28.6Q24.4 44.6 22.1 28.6Q9.6 38.9 19.4 25.9Q3.6 24.3 19.4 22.1Q9.3 9.8 22.1 19.4Q23.6 3.4 25.9 19.4Q38.6 9.2 28.6 22.1Z"/><circle cx="24" cy="24" r="2.2"/><path d="M33 24.2h3.4M24 33v3.2M15 23.8h-3.2M24.2 15v-3.3"/></g></symbol>
+  <symbol id="d-chili" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 38.6C14 31 22.6 22.4 33.8 16.3c3.7-2 6.4.2 4.3 3.3C31.2 29 21 36.4 12.7 40.3c-2.2 1-3.9.3-3.2-1.7Z"/><path d="M35.6 16.2c1.6-3.4 3.9-5.6 7.4-6.6"/><path d="M34 19.8c-5.8 5.9-12.4 11-19.6 14.8"/></g></symbol>
+  <symbol id="d-cardamom" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M24.4 5.6c8.4 8.1 8.9 27.5-.2 36.9C15.3 33.9 15.1 14.5 24.4 5.6Z"/><path d="M24.3 10.4c2.6 7.4 2.8 19.3-.2 28M20.4 15.8c-.6 5.4-.4 11.3.8 16.6"/><path d="M24.3 5.6c.3-1.6 1.1-2.6 2.4-3.2"/></g></symbol>
+  <symbol id="d-cinnamon" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8.2 30.4 36.3 13.8M12.3 36.8l28.2-16.5"/><path d="M8.2 30.4c-2.3 1.6-1.4 6.8 4.1 6.4"/><path d="M36.3 13.8c3.9-2.4 7 2.3 4.2 6.5"/><path d="M37.5 16.6c-.9 1.6.5 2.8 2 1.9"/></g></symbol>
+  <symbol id="d-leaf" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42.5V24.3"/><path d="M24 24.3c-8.1-1.6-12.6-9.3-8.3-15.6 3.6 1.9 5.9-2.2 8.2-2.4 2.4.1 4.5 4.3 8.2 2.3 4.4 6.4-.1 14.1-8.1 15.7Z"/><path d="M24 24.3V12.6M24 19l-4.2-4.1M24 17.2l4.5-4.4"/></g></symbol>
+  <!-- Kringel und Unterstreichungen -->
+  <symbol id="d-underline" viewBox="0 0 200 16"><path vector-effect="non-scaling-stroke" fill="none" stroke="currentColor" stroke-linecap="round" d="M3 11.2C33 4.6 61 3.5 92 7.2c26 3.1 44 6.1 70 3.9 13-1.1 24-3.6 35-6.8"/></symbol>
+  <symbol id="d-scribble" viewBox="0 0 160 44"><path vector-effect="non-scaling-stroke" fill="none" stroke="currentColor" stroke-linecap="round" d="M9.6 24.4C4.8 10.8 57.2 3.6 106.8 5.9c39 1.8 51.7 16.6 36.7 26.3-17.4 11.2-78.7 11.9-117.2 5.1C9 34.2 1.7 25.2 10.4 17.3c7.7-7 25.9-9.6 39.1-10.4"/></symbol>
+</svg>
+
+<a class="skip" href="#inhalt" data-c="bedienhilfen.zum_inhalt_springen"></a>
+
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<header class="nav" data-nav>
+  <a class="nav__brand" href="#top" data-c="restaurant.name"></a>
+  <nav class="nav__links" data-attr="aria-label=bedienhilfen.hauptnavigation">
+    <a class="nav__link" href="#speisekarte" data-c="navigation.speisekarte"></a>
+    <a class="nav__link" href="#besuch" data-c="navigation.oeffnungszeiten"></a>
+    <a class="nav__call" data-tel data-attr="aria-label=navigation.anrufen"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></a>
+    <a class="btn btn--small" data-order target="_blank" rel="noopener">
+      <span data-c="navigation.bestellen"></span>
+      <span class="btn__icon" aria-hidden="true"><svg class="ico"><use href="#i-arrow-up-right"/></svg></span>
+    </a>
+  </nav>
+</header>
+
+<main id="inhalt">
+  <!-- 1 · Hero -->
+  <section class="hero" id="top">
+    <div class="hero__media">
+      <picture class="hero__pic">
+        <source media="(max-width: 767px)" data-src-from="hero.bild_mobil" srcset="assets/img/hero-spices-m.webp">
+        <img class="hero__img" src="assets/img/hero-spices.webp" data-src-from="hero.bild" data-attr="alt=hero.bild_beschreibung" alt="" width="1376" height="768" fetchpriority="high" decoding="async">
+      </picture>
+    </div>
+    <div class="hero__inner">
+      <h1 class="hero__title" data-rich="hero.titel" data-rich-italic="hero.titel_kursives_wort" data-rich-underline="hero.titel_unterstrichenes_wort"></h1>
+      <p class="hero__claim" data-c="hero.claim"></p>
+      <a class="hero__rating" data-google target="_blank" rel="noopener">
+        <span class="stars" data-stars="5" aria-hidden="true"></span>
+        <strong data-c="restaurant.google_sterne"></strong>
+        <span><span data-c="restaurant.google_anzahl_rezensionen"></span> <span data-c="hero.bewertung_text"></span></span>
+      </a>
+    </div>
+    <div class="hero__cue" aria-hidden="true"><span data-c="hero.scroll_hinweis"></span><i></i></div>
+    <p class="ki-badge" data-ki="hero.ki_generiert"></p>
+  </section>
+
+  <!-- 1b · Galerie: PLATZHALTER. Die Bilder sind lizenzfreie Stockfotos und zeigen nicht das Restaurant;
+       sie werden später durch echte Fotos ersetzt (Anleitung: LIES-MICH.md, Abschnitt „Galerie“).
+       Bildquellen (alle Pexels, Pexels-Lizenz: kostenlos, kommerziell nutzbar, keine Namensnennung nötig):
+       platzhalter-ambiente-1.jpg      Lakshmi Raj          https://www.pexels.com/photo/39068397/
+       platzhalter-gewuerzmarkt.jpg    AXP Photography      https://www.pexels.com/photo/19227962/
+       platzhalter-tandoor.jpg         Valeria Boltneva     https://www.pexels.com/photo/32558924/
+       platzhalter-naan.jpg            Kunal Lakhotia       https://www.pexels.com/photo/28674556/
+       platzhalter-ambiente-2.jpg      Shyam Srivastava     https://www.pexels.com/photo/33321182/
+       platzhalter-gedeckter-tisch.jpg khezez               https://www.pexels.com/photo/36799070/ -->
+  <section class="gallery" id="impressionen" aria-labelledby="gallery-title" data-gallery>
+    <div class="gallery__intro" data-gallery-intro>
+      <h2 class="h2" id="gallery-title" data-c="galerie.titel"></h2>
+      <p class="lead" data-c="galerie.text"></p>
+      <p class="placeholder-note" data-c="galerie.platzhalter_hinweis"></p>
+    </div>
+    <div class="gallery__pin" tabindex="0" role="region" data-attr="aria-label=bedienhilfen.galerie_label" data-gallery-pin>
+      <div class="gallery__track" data-gallery-track></div>
+    </div>
+  </section>
+
+  <!-- 2-4 · Gerichte-Szenen (werden aus content.json "gerichte" erzeugt) -->
+  <div class="dishes" data-dishes></div>
+
+  <!-- 5 · Speisekarte -->
+  <section class="menu" id="speisekarte" aria-labelledby="menu-title">
+    <div class="wrap">
+      <div class="menu__head">
+        <h2 class="h2" id="menu-title"><span data-c="speisekarte.titel"></span><svg class="squiggle squiggle--curry" aria-hidden="true" preserveAspectRatio="none"><use href="#d-underline"/></svg></h2>
+        <p class="lead" data-c="speisekarte.einleitung"></p>
+      </div>
+      <ul class="menu__list" data-menu></ul>
+      <div class="menu__foot">
+        <p class="note" data-c="speisekarte.hinweis"></p>
+        <a class="btn" data-order target="_blank" rel="noopener">
+          <span data-c="speisekarte.button_text"></span>
+          <span class="btn__icon" aria-hidden="true"><svg class="ico"><use href="#i-arrow-up-right"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · Bewertungen -->
+  <section class="reviews" id="bewertungen" aria-labelledby="reviews-title">
+    <div class="wrap reviews__head">
+      <h2 class="h2" id="reviews-title" data-c="bewertungen.titel"></h2>
+      <div class="score">
+        <span class="score__num" data-c="restaurant.google_sterne" data-count></span>
+        <span class="score__meta">
+          <span class="stars stars--lg" data-stars="5" aria-hidden="true"></span>
+          <span><span data-c="bewertungen.sterne_text"></span>, <span data-c="restaurant.google_anzahl_rezensionen"></span> <span data-c="hero.bewertung_text"></span></span>
+        </span>
+      </div>
+    </div>
+    <div class="wrap"><p class="placeholder-note" data-c="bewertungen.platzhalter_hinweis"></p></div>
+    <div class="marquee" data-marquee>
+      <div class="marquee__track" data-reviews></div>
+    </div>
+    <div class="wrap reviews__foot">
+      <a class="textlink" data-google target="_blank" rel="noopener"><span data-c="bewertungen.google_link_text"></span><svg class="ico" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+    </div>
+  </section>
+
+  <!-- 7 · Standort & Oeffnungszeiten -->
+  <section class="visit" id="besuch" aria-labelledby="visit-title">
+    <div class="wrap visit__grid">
+      <div class="visit__place">
+        <h2 class="h2" id="visit-title" data-c="standort.titel"></h2>
+        <address class="visit__address">
+          <span data-c="restaurant.name"></span>
+          <span class="visit__street" data-c="restaurant.strasse"></span>
+          <span><span data-c="restaurant.plz"></span> <span data-c="restaurant.ort"></span></span>
+        </address>
+        <p class="status" data-status></p>
+        <div class="actions">
+          <a class="btn" data-tel>
+            <span data-c="standort.anrufen_button"></span>
+            <span class="btn__icon" aria-hidden="true"><svg class="ico"><use href="#i-phone"/></svg></span>
+          </a>
+          <a class="btn btn--ghost" data-route target="_blank" rel="noopener">
+            <span data-c="standort.route_button"></span>
+            <span class="btn__icon" aria-hidden="true"><svg class="ico"><use href="#i-navigation-arrow"/></svg></span>
+          </a>
+        </div>
+        <p class="visit__phone"><a data-tel data-c="restaurant.telefon_anzeige"></a></p>
+      </div>
+      <div class="visit__hours" id="oeffnungszeiten">
+        <h3 class="h3" data-c="oeffnungszeiten.titel"></h3>
+        <dl class="hours" data-hours></dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · Abschluss -->
+  <section class="finale" aria-labelledby="finale-title">
+    <svg class="finale__anise" aria-hidden="true"><use href="#d-anise"/></svg>
+    <div class="wrap finale__inner">
+      <h2 class="finale__title" id="finale-title" data-rich="abschluss.titel" data-rich-italic="abschluss.kursives_wort"></h2>
+      <p class="lead" data-c="abschluss.text"></p>
+      <div class="actions actions--center">
+        <a class="btn btn--lg" data-order target="_blank" rel="noopener">
+          <span data-c="abschluss.bestellen_button"></span>
+          <span class="btn__icon" aria-hidden="true"><svg class="ico"><use href="#i-shopping-bag"/></svg></span>
+        </a>
+        <a class="btn btn--lg btn--ghost" data-tel>
+          <span data-c="abschluss.anrufen_button"></span>
+          <span class="btn__icon" aria-hidden="true"><svg class="ico"><use href="#i-phone"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <p class="footer__brand" data-c="restaurant.name"></p>
+    <p class="footer__addr">
+      <span data-c="restaurant.strasse"></span>, <span data-c="restaurant.plz"></span> <span data-c="restaurant.ort"></span><br>
+      <a data-tel data-c="restaurant.telefon_anzeige"></a>
+    </p>
+    <nav class="footer__links">
+      <a data-attr="href=footer.impressum_link" data-c="footer.impressum_text"></a>
+      <a data-attr="href=footer.datenschutz_link" data-c="footer.datenschutz_text"></a>
+    </nav>
+    <p class="footer__ki" data-ki-footer></p>
+    <p class="footer__copy" data-c="footer.copyright"></p>
+  </div>
+</footer>
+</body>
+</html>

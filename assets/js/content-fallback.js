@@ -1,0 +1,311 @@
+/* Sicherheitskopie der Texte aus content.json (Stand der Auslieferung).
+   Wird nur benutzt, wenn content.json fehlt oder einen Fehler enthält. Bitte nicht bearbeiten. */
+window.TOI_FALLBACK = {
+ "_anleitung": "Alle Texte der Website stehen in dieser Datei. Nur den Text zwischen den Anführungszeichen rechts vom Doppelpunkt ändern. Mehr dazu in LIES-MICH.md.",
+ "restaurant": {
+  "name": "Taste of India",
+  "beschreibung_kurz": "Indisches Restaurant in Kassel",
+  "telefon_anzeige": "0561 97010337",
+  "telefon_waehlen": "+4956197010337",
+  "strasse": "Wolfhager Str. 415",
+  "plz": "34128",
+  "ort": "Kassel",
+  "route_link": "https://www.google.com/maps/search/?api=1&query=Taste+of+India+Wolfhager+Str.+415+34128+Kassel",
+  "bestellen_link": "https://www.lieferando.de/speisekarte/taste-of-india-kassel-34128",
+  "google_sterne": "4,7",
+  "google_anzahl_rezensionen": "37",
+  "google_link": "https://www.google.com/maps/search/?api=1&query=Taste+of+India+Wolfhager+Str.+415+Kassel"
+ },
+ "seo": {
+  "seitentitel": "Taste of India Kassel | Indisches Restaurant in der Wolfhager Straße",
+  "beschreibung": "Butter Chicken, Lamm Biryani und Saag Paneer: indische Küche in der Wolfhager Straße in Kassel. Abholen, liefern lassen oder reservieren unter 0561 97010337."
+ },
+ "navigation": {
+  "speisekarte": "Speisekarte",
+  "oeffnungszeiten": "Öffnungszeiten",
+  "bestellen": "Bestellen",
+  "anrufen": "Anrufen"
+ },
+ "ki_kennzeichnung": {
+  "bild_text": "KI-generiertes Symbolbild",
+  "footer_text_anzeigen": true,
+  "footer_text": "Die Food-Abbildungen auf dieser Website sind KI-generierte Symbolbilder und können vom tatsächlichen Gericht abweichen."
+ },
+ "hero": {
+  "titel": "Taste of India",
+  "titel_kursives_wort": "of",
+  "titel_unterstrichenes_wort": "India",
+  "claim": "Indische Küche in Kassel. Zum Abholen, zur Lieferung und vor Ort.",
+  "bewertung_text": "Google-Rezensionen",
+  "scroll_hinweis": "Scrollen",
+  "bild": "assets/img/hero-spices.webp",
+  "bild_mobil": "assets/img/hero-spices-m.webp",
+  "bild_beschreibung": "Indische Gewürze von oben: Kurkuma, Chili, Zimt, Kardamom und Sternanis auf hellem Leinen",
+  "ki_generiert": true
+ },
+ "galerie": {
+  "_hinweis": "PLATZHALTER: Alle Bilder dieser Galerie sind lizenzfreie Stockfotos von Pexels und zeigen NICHT das Restaurant. Bitte durch eigene Fotos ersetzen (Anleitung in LIES-MICH.md, Abschnitt Galerie).",
+  "titel": "Impressionen",
+  "text": "Gewürze, Tandoor, frisches Naan: ein erster Eindruck.",
+  "platzhalter_hinweis": "Platzhalter: Diese Stockfotos werden durch echte Fotos des Restaurants ersetzt.",
+  "platzhalter_label": "Platzhalter",
+  "bilder": [
+   {
+    "bild": "assets/img/galerie/platzhalter-ambiente-1.jpg",
+    "format": "hoch",
+    "bildunterschrift": "Ambiente",
+    "beschreibung": "Gastraum eines indischen Restaurants mit grünen Sitzbänken und warmem Licht",
+    "ist_platzhalter": true,
+    "quelle": "Foto: Lakshmi Raj, Pexels, Pexels-Lizenz (kostenlos, auch kommerziell, ohne Namensnennung), https://www.pexels.com/photo/39068397/"
+   },
+   {
+    "bild": "assets/img/galerie/platzhalter-gewuerzmarkt.jpg",
+    "format": "quer",
+    "bildunterschrift": "Gewürze",
+    "beschreibung": "Marktstand mit Bergen von bunten Gewürzen",
+    "ist_platzhalter": true,
+    "quelle": "Foto: AXP Photography, Pexels, Pexels-Lizenz (kostenlos, auch kommerziell, ohne Namensnennung), https://www.pexels.com/photo/19227962/"
+   },
+   {
+    "bild": "assets/img/galerie/platzhalter-tandoor.jpg",
+    "format": "hoch",
+    "bildunterschrift": "Tandoor",
+    "beschreibung": "Fladenbrote backen an der Wand eines Tandoor-Ofens über glühender Kohle",
+    "ist_platzhalter": true,
+    "quelle": "Foto: Valeria Boltneva, Pexels, Pexels-Lizenz (kostenlos, auch kommerziell, ohne Namensnennung), https://www.pexels.com/photo/32558924/"
+   },
+   {
+    "bild": "assets/img/galerie/platzhalter-naan.jpg",
+    "format": "quer",
+    "bildunterschrift": "Naan",
+    "beschreibung": "Frisches Naan und Roti in einem Brotkorb",
+    "ist_platzhalter": true,
+    "quelle": "Foto: Kunal Lakhotia, Pexels, Pexels-Lizenz (kostenlos, auch kommerziell, ohne Namensnennung), https://www.pexels.com/photo/28674556/"
+   },
+   {
+    "bild": "assets/img/galerie/platzhalter-ambiente-2.jpg",
+    "format": "hoch",
+    "bildunterschrift": "Tisch mit Wandbild",
+    "beschreibung": "Gedeckter Holztisch vor einem Scherenschnitt-Wandbild",
+    "ist_platzhalter": true,
+    "quelle": "Foto: Shyam Srivastava, Pexels, Pexels-Lizenz (kostenlos, auch kommerziell, ohne Namensnennung), https://www.pexels.com/photo/33321182/"
+   },
+   {
+    "bild": "assets/img/galerie/platzhalter-gedeckter-tisch.jpg",
+    "format": "quer",
+    "bildunterschrift": "Gedeckter Tisch",
+    "beschreibung": "Indische Gerichte, Reis und Brot auf einer gemusterten Tischdecke",
+    "ist_platzhalter": true,
+    "quelle": "Foto: khezez, Pexels, Pexels-Lizenz (kostenlos, auch kommerziell, ohne Namensnennung), https://www.pexels.com/photo/36799070/"
+   }
+  ]
+ },
+ "gerichte": [
+  {
+   "name": "Butter Chicken",
+   "kursives_wort": "Butter",
+   "beschreibung": "Zartes Hähnchen in cremiger Tomaten-Butter-Sauce, dazu Naan.",
+   "preis": "14,50 €",
+   "effekt": "explosion",
+   "ueberschrift": "rechts",
+   "bild": "assets/img/butter-chicken.webp",
+   "bild_mobil": "assets/img/butter-chicken-m.webp",
+   "bild_explodiert": "assets/img/butter-chicken-explode.webp",
+   "bild_explodiert_mobil": "assets/img/butter-chicken-explode-m.webp",
+   "bild_beschreibung": "Butter Chicken in einer Kupferschale, daneben Naan-Brot",
+   "ki_generiert": true
+  },
+  {
+   "name": "Lamm Biryani",
+   "kursives_wort": "Biryani",
+   "beschreibung": "Basmatireis, geschmortes Lamm und ganze Gewürze.",
+   "preis": "15,90 €",
+   "effekt": "explosion",
+   "ueberschrift": "links",
+   "bild": "assets/img/biryani.webp",
+   "bild_mobil": "assets/img/biryani-m.webp",
+   "bild_explodiert": "assets/img/biryani-explode.webp",
+   "bild_explodiert_mobil": "assets/img/biryani-explode-m.webp",
+   "bild_beschreibung": "Lamm Biryani in einem Tontopf mit geöffnetem Deckel",
+   "ki_generiert": true
+  },
+  {
+   "name": "Saag Paneer",
+   "kursives_wort": "Paneer",
+   "beschreibung": "Paneer-Käse in würzigem Spinat, mit Kreuzkümmel.",
+   "preis": "14,50 €",
+   "effekt": "kreis",
+   "ueberschrift": "rechts",
+   "bild": "assets/img/saag-paneer.webp",
+   "bild_mobil": "assets/img/saag-paneer-m.webp",
+   "bild_explodiert": "",
+   "bild_explodiert_mobil": "",
+   "bild_beschreibung": "Saag Paneer in einer Messingschale, daneben Kreuzkümmel",
+   "ki_generiert": true
+  }
+ ],
+ "speisekarte": {
+  "titel": "Speisekarte",
+  "einleitung": "Elf Kategorien, hier jeweils mit dem Einstiegspreis.",
+  "preis_vorsilbe": "ab",
+  "kategorien": [
+   {
+    "name": "Suppen",
+    "preis": "6,50 €"
+   },
+   {
+    "name": "Vorspeisen",
+    "preis": "7,50 €"
+   },
+   {
+    "name": "Indische Brote",
+    "preis": "2,00 €"
+   },
+   {
+    "name": "Vegetarisch",
+    "preis": "14,50 €"
+   },
+   {
+    "name": "Chicken",
+    "preis": "14,50 €"
+   },
+   {
+    "name": "Ente",
+    "preis": "16,90 €"
+   },
+   {
+    "name": "Lamm",
+    "preis": "15,50 €"
+   },
+   {
+    "name": "Meeresfrüchte",
+    "preis": "17,50 €"
+   },
+   {
+    "name": "Biryani",
+    "preis": "14,90 €"
+   },
+   {
+    "name": "Desserts",
+    "preis": "3,90 €"
+   },
+   {
+    "name": "Getränke",
+    "preis": "2,50 €"
+   }
+  ],
+  "hinweis": "Einstiegspreise je Kategorie. Alle Gerichte und aktuellen Preise stehen bei Lieferando.",
+  "button_text": "Ganze Karte bei Lieferando"
+ },
+ "bewertungen": {
+  "titel": "Bewertungen",
+  "sterne_text": "Sterne bei Google",
+  "platzhalter_hinweis": "Platzhalter: Diese drei Stimmen werden durch echte Google-Bewertungen ersetzt.",
+  "eintraege": [
+   {
+    "text": "Platzhalter für eine echte Google-Bewertung. Hier steht später ein kurzes Zitat eines Gastes.",
+    "name": "Platzhalter",
+    "sterne": 5,
+    "ist_platzhalter": true
+   },
+   {
+    "text": "Platzhalter für eine zweite Google-Bewertung, am besten zwei bis drei Sätze lang.",
+    "name": "Platzhalter",
+    "sterne": 5,
+    "ist_platzhalter": true
+   },
+   {
+    "text": "Platzhalter für eine dritte Google-Bewertung, zum Beispiel über den Lieferservice.",
+    "name": "Platzhalter",
+    "sterne": 5,
+    "ist_platzhalter": true
+   }
+  ],
+  "google_link_text": "Alle Rezensionen bei Google",
+  "platzhalter_label": "Platzhalter"
+ },
+ "oeffnungszeiten": {
+  "titel": "Öffnungszeiten",
+  "tage": [
+   {
+    "tag": "Montag",
+    "zeiten": [
+     "11:30-14:30",
+     "16:30-22:00"
+    ]
+   },
+   {
+    "tag": "Dienstag",
+    "zeiten": [
+     "11:30-14:30",
+     "16:30-22:00"
+    ]
+   },
+   {
+    "tag": "Mittwoch",
+    "zeiten": []
+   },
+   {
+    "tag": "Donnerstag",
+    "zeiten": [
+     "11:30-14:30",
+     "16:30-22:00"
+    ]
+   },
+   {
+    "tag": "Freitag",
+    "zeiten": [
+     "11:30-14:30",
+     "16:30-22:00"
+    ]
+   },
+   {
+    "tag": "Samstag",
+    "zeiten": [
+     "11:30-14:30",
+     "16:30-22:00"
+    ]
+   },
+   {
+    "tag": "Sonntag",
+    "zeiten": [
+     "11:30-14:30",
+     "16:30-22:00"
+    ]
+   }
+  ],
+  "geschlossen_text": "Ruhetag",
+  "heute_text": "Heute",
+  "jetzt_geoeffnet_text": "Jetzt geöffnet",
+  "jetzt_geschlossen_text": "Gerade geschlossen",
+  "uhr_text": "Uhr",
+  "bis_text": "bis",
+  "oeffnet_heute_um_text": "öffnet heute um"
+ },
+ "standort": {
+  "titel": "So finden Sie uns",
+  "anrufen_button": "Anrufen",
+  "route_button": "Route planen"
+ },
+ "abschluss": {
+  "titel": "Bestellen oder reservieren.",
+  "kursives_wort": "reservieren",
+  "text": "Zum Abholen, per Lieferung oder mit Tisch vor Ort.",
+  "bestellen_button": "Jetzt bestellen",
+  "anrufen_button": "Anrufen & reservieren"
+ },
+ "footer": {
+  "impressum_text": "Impressum",
+  "impressum_link": "impressum.html",
+  "datenschutz_text": "Datenschutz",
+  "datenschutz_link": "datenschutz.html",
+  "copyright": "© 2026 Taste of India, Kassel"
+ },
+ "bedienhilfen": {
+  "zum_inhalt_springen": "Zum Inhalt springen",
+  "hauptnavigation": "Hauptnavigation",
+  "sterne_von_fuenf": "von 5 Sternen",
+  "startseite": "Zur Startseite",
+  "galerie_label": "Bildergalerie, seitlich scrollbar"
+ }
+};
