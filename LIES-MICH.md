@@ -1,22 +1,19 @@
-# Website Taste of India: Texte selbst ändern
+# Website Karma Specialty Coffee: Texte selbst ändern
 
 Hier steht, wie Sie Texte, Preise, Öffnungszeiten und Bilder Ihrer Website selbst ändern können.
-Sie brauchen dafür keine Programmierkenntnisse, sondern nur einen einfachen Texteditor.
+Sie brauchen dafür keine Programmierkenntnisse, nur einen einfachen Texteditor.
 
 ---
 
 ## 1. Welche Datei öffne ich?
 
-**Alles Sichtbare steht in einer einzigen Datei: `content.json`**
-
+**Alles Sichtbare steht in einer einzigen Datei: `content.json`.**
 Sie liegt im Hauptordner der Website, direkt neben `index.html`.
 
 Zum Öffnen einen **einfachen Texteditor** verwenden:
 
-- **Windows:** Rechtsklick auf `content.json` → „Öffnen mit“ → **Editor** (Notepad).
-  Noch angenehmer ist das kostenlose Programm **Notepad++**.
-- **Mac:** Rechtsklick → „Öffnen mit“ → **TextEdit**.
-  Wichtig: In TextEdit vorher im Menü *Format* → **„In reinen Text umwandeln“** wählen.
+- **Windows:** Rechtsklick auf `content.json` → „Öffnen mit“ → **Editor**. Noch angenehmer ist das kostenlose **Notepad++**.
+- **Mac:** Rechtsklick → „Öffnen mit“ → **TextEdit**. Vorher im Menü *Format* → **„In reinen Text umwandeln“** wählen.
 
 **Nicht verwenden:** Word, Pages oder LibreOffice. Diese Programme verändern die Anführungszeichen und machen die Datei unbrauchbar.
 
@@ -27,186 +24,125 @@ Zum Öffnen einen **einfachen Texteditor** verwenden:
 Jede Zeile hat links einen **Namen** und rechts den **Inhalt**:
 
 ```
-"telefon_anzeige": "0561 97010337",
+"preis": "7,90 €",
 ```
 
-- Links vom Doppelpunkt steht der Name, z. B. `"telefon_anzeige"`. **Den nie ändern.**
-- Rechts steht der Text zwischen Anführungszeichen, z. B. `"0561 97010337"`. **Nur den ändern Sie.**
-
-Die Datei ist in Bereiche gegliedert:
+- Links vom Doppelpunkt steht der Name (`"preis"`). **Den nie ändern.**
+- Rechts steht der Text zwischen Anführungszeichen (`"7,90 €"`). **Nur den ändern Sie.**
 
 | Bereich | Was drinsteht |
 |---|---|
-| `restaurant` | Name, Telefon, Adresse, Link zu Lieferando, Google-Sterne |
+| `cafe` | Name, Adresse, Instagram, Google-Sterne und Anzahl der Bewertungen, Links |
 | `seo` | Titel und Beschreibung für Google |
-| `hero` | Große Überschrift ganz oben, Satz darunter, Bild |
-| `galerie` | Die Bilderreihe „Impressionen“ direkt unter der Überschrift (**noch Platzhalter-Fotos**) |
-| `gerichte` | Die drei großen Gerichte-Szenen: Name, Beschreibung, Preis, Bilder |
-| `speisekarte` | Kategorien mit „ab“-Preis |
-| `bewertungen` | Die Kundenstimmen |
+| `navigation` | Menüpunkte oben, Text „Heute geöffnet bis …“ |
+| `hero` | Goldener Schriftzug ganz oben („Karma“ / „Specialty Coffee“), Satz und Knopf darunter, Bildbeschreibungen der vier Becher |
+| `highlights` | Die zwei Highlights vor der Karte (Açaí auf Lila, Matcha auf Grün): Name, Untertitel, Beschreibung, Zutaten, Größe, Beispielpreis |
+| `impressionen` | Die Stimmungsbilder (derzeit gemeinfreie Fotos, nicht aus dem Café; gern durch eigene ersetzen) |
+| `speisekarte` | Kategorien und Einträge der Karte (Name, Beschreibung, Preis, Bild) |
 | `oeffnungszeiten` | Tage und Uhrzeiten |
-| `standort`, `abschluss`, `footer` | Button-Texte, Schlusssatz, Links zu Impressum und Datenschutz |
-| `ki_kennzeichnung` | Hinweis „KI-generiertes Symbolbild“ |
+| `besuch`, `footer` | Texte unten, Links zu Impressum und Datenschutz |
+| `bildkennzeichnung` | Hinweis „Symbolbild“ unter den Bechern und Bildhinweis im Footer |
 
 ---
 
 ## 3. Was darf ich ändern, was nicht?
 
-### Das dürfen Sie
+**Das dürfen Sie:** jeden Text **zwischen den Anführungszeichen rechts**, Preise, und `true`/`false` umstellen (ohne Anführungszeichen).
 
-- Jeden Text **zwischen den Anführungszeichen rechts** ändern.
-- Preise ändern, z. B. `"14,50 €"` → `"15,00 €"`.
-- `true` und `false` umstellen (ohne Anführungszeichen!), z. B. beim KI-Hinweis.
-
-### Das bitte nicht
-
-1. **Kommas nicht löschen.** Am Ende fast jeder Zeile steht ein Komma. Es trennt die Einträge.
-   Die **letzte** Zeile in einem Bereich (direkt vor `}` oder `]`) hat **kein** Komma.
+**Das bitte nicht:**
+1. **Kommas nicht löschen.** Am Ende fast jeder Zeile steht ein Komma. Die **letzte** Zeile in einem Bereich (direkt vor `}` oder `]`) hat **keins**.
 2. **Anführungszeichen nicht löschen.** Jeder Text beginnt und endet mit `"`.
-3. **Keine Anführungszeichen im Text selbst.** Wenn Sie eins brauchen, schreiben Sie `\"`
-   oder nehmen Sie typografische Zeichen wie „so“.
-4. **Die Namen links** (`"preis"`, `"tag"` …) sowie die Klammern `{ } [ ]` nicht verändern.
-
-**Richtig:**
-```
-"preis": "15,90 €",
-```
-**Falsch** (Komma fehlt, Anführungszeichen fehlt):
-```
-"preis": "15,90 €
-```
+3. **Keine geraden Anführungszeichen im Text.** Nehmen Sie typografische wie „so“.
+4. **Die Namen links** und die Klammern `{ } [ ]` nicht verändern.
 
 ---
 
-## 4. Häufige Änderungen, Schritt für Schritt
+## 4. Häufige Änderungen
 
 ### Einen Preis ändern
-Suchen Sie (Strg+F bzw. Cmd+F) nach dem Gericht, z. B. `Butter Chicken`. Zwei Zeilen darunter steht `"preis": "14,50 €",`. Nur die Zahl ändern.
+Mit Strg+F (Mac: Cmd+F) nach dem Namen suchen, z. B. `Berry Blast`. In derselben Zeile steht `"preis": "8,40 €"`. Nur die Zahl ändern.
+Achtung: Die zwei Highlights (`Karma Signature`, `Iced Strawberry Matcha`) stehen zweimal in der Datei, einmal bei `highlights`
+(großer farbiger Abschnitt) und einmal bei `speisekarte` (Karte). Bitte beide Preise ändern. Bei den Highlights steht neben dem
+Preis „Beispielpreis“; das Wort steht bei `highlights` → `preis_hinweis` und kann gelöscht werden (`""`), sobald die Preise stimmen.
 
 ### Öffnungszeiten ändern
-Im Bereich `oeffnungszeiten` steht für jeden Tag:
+Im Bereich `oeffnungszeiten` steht für jeden Tag z. B.:
 ```
-{ "tag": "Montag", "zeiten": ["11:30-14:30", "16:30-22:00"] },
+{ "tag": "Montag", "zeiten": ["09:00-19:00"] },
 ```
-- Zeiten immer im Format `"11:30-14:30"` (Stunde:Minute, Bindestrich, Stunde:Minute).
+- Zeiten immer im Format `"09:00-19:00"`.
 - **Ruhetag:** leere Klammern → `"zeiten": []`
-- **Nur ein Zeitfenster:** `"zeiten": ["12:00-22:00"]`
+- **Mittagspause:** zwei Zeitfenster → `"zeiten": ["09:00-13:00", "14:00-19:00"]`
+- Den Satz `"zusammenfassung": "Täglich 9–19 Uhr"` bitte passend mitändern.
 
-Die Website hebt den heutigen Tag automatisch hervor und zeigt an, ob gerade geöffnet ist.
+Die Website zeigt oben rechts automatisch „Heute geöffnet bis 19 Uhr“ bzw. „Gerade geschlossen“ an (nach deutscher Zeit).
 
-### Telefonnummer ändern
-Zwei Einträge im Bereich `restaurant`:
-- `telefon_anzeige`: so, wie die Nummer auf der Seite **aussehen** soll (`"0561 97010337"`)
-- `telefon_waehlen`: für den Anruf-Button, **international ohne Leerzeichen** (`"+4956197010337"`)
+### Google-Bewertung aktualisieren
+Im Bereich `cafe`: `"google_sterne": "4,4"` und `"google_anzahl_bewertungen": "103"`. Die Sterne passen sich automatisch an.
 
-### Echte Bewertungen eintragen
-Im Bereich `bewertungen` → `eintraege` gibt es drei Einträge. Für jeden:
-- `text`: das Zitat aus Google (kurz halten, zwei bis drei Sätze)
-- `name`: Name, wie er bei Google steht, z. B. `"Martina K."`
-- `sterne`: Zahl von 1 bis 5, ohne Anführungszeichen
-- `ist_platzhalter`: auf **`false`** stellen, dann verschwindet das Schild „Platzhalter“
+### Speisekarte ändern
+Im Bereich `speisekarte` → `kategorien`. Jeder Eintrag sieht so aus:
+```
+{ "name": "Espresso", "beschreibung": "Specialty Roast, doppelt", "preis": "2,60 €", "bild": "assets/img/karte/coffee-espresso.webp" },
+```
+Einen Eintrag hinzufügen: eine solche Zeile kopieren und darunter einfügen (Komma dazwischen nicht vergessen).
+Ohne Bild: `"bild": ""`.
 
-Wenn alle drei echt sind, auch den Satz bei `platzhalter_hinweis` ändern, z. B. in `""` (leer) oder einen eigenen Satz.
+### Fotos unter „Impressionen“ tauschen oder ergänzen
+1. Foto im **Hochformat 4:5** zuschneiden (ideal **1200 × 1500 Pixel**), als `.jpg` oder `.webp` speichern.
+2. In den Ordner `assets/impressionen/` hochladen.
+3. In `content.json` bei `impressionen` → `bilder` einen Eintrag anlegen oder ändern:
+```
+{ "bild": "assets/impressionen/mein-foto.jpg", "format": "hoch", "bildunterschrift": "Morgens an der Theke", "beschreibung": "Barista schäumt Milch auf" },
+```
+Die `beschreibung` lesen Blinde und Google, bitte kurz beschreiben, was zu sehen ist.
+Die Galerie ordnet beliebig viele Fotos automatisch im versetzten Raster an.
 
-### Echte Fotos einsetzen
-1. Foto in den Ordner `assets/img/` hochladen (am besten als `.webp` oder `.jpg`, **Querformat 16:9**, ca. 1400 Pixel breit).
-2. In `content.json` den Pfad ändern, z. B.
-   `"bild": "assets/img/butter-chicken-echt.jpg",`
-   Für Handys gibt es `bild_mobil` (gleiches Foto, ca. 800 Pixel breit). Sie können dort auch dasselbe Foto eintragen.
-3. **KI-Kennzeichnung abschalten:** beim selben Gericht `"ki_generiert": false` setzen.
+### Die großen Becherbilder
+Die vier Becher oben und bei den Highlights stammen aus dem Bild, das Sie bereitgestellt haben (Iced Strawberry Matcha,
+zwei Açaí-Becher, Erdbeer-Smoothie). Sie sind freigestellt und liegen einzeln in `assets/hero/`
+(`cup-matcha.webp`, `cup-mango.webp`, `cup-karma.webp`, `cup-pink.webp`). Sie sind als „Symbolbild“ gekennzeichnet.
 
-**Bewegung der Gerichte:**
-- `ueberschrift`: `"rechts"` oder `"links"`, also auf welcher Seite Name und Preis stehen. Das Bild weicht zur anderen Seite aus.
-- `effekt`: `"explosion"` (die Zutaten fliegen beim Scrollen auseinander) oder `"kreis"` (das Bild öffnet sich aus einem kleinen Kreis und dreht sich dabei).
-  Die Explosion braucht ein zweites, exakt passendes Bild in `bild_explodiert`. Wenn Sie echte Fotos einsetzen, lassen Sie
-  `bild_explodiert` leer (`""`); die Szene zeigt das Foto dann automatisch mit dem Kreis-Effekt.
-
-Echte Fotos wirken am besten, wenn die Schale in der Bildmitte steht und der Hintergrund hell und ruhig ist.
-
-### Galerie „Impressionen“: Platzhalter durch eigene Fotos ersetzen
-
-**Wichtig:** Die sechs Bilder der Galerie sind **Platzhalter**. Es sind lizenzfreie Stockfotos
-(Pexels, frei nutzbar) und sie zeigen **nicht** Ihr Restaurant. Auf der Website tragen sie deshalb das
-Schild „Platzhalter“. Bitte so bald wie möglich durch eigene Fotos ersetzen.
-
-Die Bilder liegen im Ordner `assets/img/galerie/`:
-
-| Datei | Format | Motiv-Idee für Ihr Foto |
-|---|---|---|
-| `platzhalter-ambiente-1.jpg` | **hoch** (4:5) | Ihr Gastraum |
-| `platzhalter-gewuerzmarkt.jpg` | **quer** (3:2) | Gewürze aus Ihrer Küche |
-| `platzhalter-tandoor.jpg` | **hoch** (4:5) | Ihr Tandoor-Ofen oder die Küche |
-| `platzhalter-naan.jpg` | **quer** (3:2) | frisches Naan |
-| `platzhalter-ambiente-2.jpg` | **hoch** (4:5) | ein gedeckter Tisch, Deko, Eingang |
-| `platzhalter-gedeckter-tisch.jpg` | **quer** (3:2) | mehrere Gerichte auf dem Tisch |
-
-**Der einfachste Weg (gleicher Dateiname):**
-1. Ihr Foto auf das richtige Format zuschneiden:
-   - „hoch“ = Hochformat **4:5**, ideal **900 × 1125 Pixel**
-   - „quer“ = Querformat **3:2**, ideal **1350 × 900 Pixel**
-   Das geht z. B. am Handy in der Fotos-App (Zuschneiden → Seitenverhältnis) oder am PC mit „Paint“.
-   Stimmt das Seitenverhältnis nicht, wird das Foto am Rand abgeschnitten.
-2. Das Foto als **JPG** speichern und **genau so benennen** wie die Datei, die es ersetzen soll,
-   z. B. `platzhalter-naan.jpg`.
-3. Die Datei in `assets/img/galerie/` hochladen und die alte **überschreiben**.
-4. In `content.json` im Bereich `galerie` → `bilder` beim passenden Bild
-   `"ist_platzhalter": false` setzen, dann verschwindet das Schild „Platzhalter“.
-   Auch `bildunterschrift` (kurzer Text unter dem Bild) und `beschreibung` (für Blinde und Google)
-   passend zu Ihrem Foto ändern. Die Zeile `quelle` können Sie dann löschen oder leer lassen (`""`).
-5. Sind alle sechs ersetzt, verschwindet der Hinweis „Platzhalter: Diese Stockfotos …“ automatisch.
-
-**Anderer Dateiname?** Auch möglich: Foto hochladen und in `content.json` den Pfad bei `"bild"` ändern.
-Bei `"format"` eintragen, ob es `"hoch"` oder `"quer"` ist.
-
-### KI-Hinweis im Footer
-Im Bereich `ki_kennzeichnung`: `"footer_text_anzeigen": false` blendet den Satz aus.
-Das bitte erst tun, wenn **alle** Bilder echte Fotos sind.
+Ein Becher lässt sich tauschen, indem man eine Datei mit **gleichem Namen** und durchsichtigem Hintergrund
+(WebP oder PNG, etwa 380 × 650 Pixel, Becher unten bündig) hochlädt. Bei einem anderen Seitenverhältnis bitte in
+`index.html` die Angaben `width`/`height` des Bildes anpassen. Die Aufbereitung aus einem neuen Gesamtbild beschreibt die
+README (Ordner `tools/hero/`).
 
 ---
 
 ## 5. Wie lade ich die Datei hoch?
 
 1. Datei speichern (Strg+S bzw. Cmd+S). Der Dateiname bleibt **genau** `content.json`.
-2. Beim Webhoster anmelden (z. B. IONOS, Strato, all-inkl) und den **Dateimanager** öffnen,
-   oder ein FTP-Programm wie **FileZilla** verwenden.
-3. In den Ordner der Website wechseln (dort liegt auch `index.html`).
-4. `content.json` hochladen und die alte Datei **ersetzen**.
-5. Die Website im Browser neu laden. Falls noch der alte Text zu sehen ist: **Strg+F5** (Windows) bzw. **Cmd+Shift+R** (Mac).
+2. Beim Webhoster anmelden und den **Dateimanager** öffnen (oder FileZilla verwenden).
+3. `content.json` in den Ordner der Website hochladen und die alte Datei **ersetzen**.
+4. Website neu laden. Falls noch der alte Text zu sehen ist: **Strg+F5** (Windows) bzw. **Cmd+Shift+R** (Mac).
 
-**Tipp:** Vor jeder Änderung eine Kopie anlegen, z. B. `content-sicherung.json`. Dann können Sie jederzeit zurück.
+**Tipp:** Vor jeder Änderung eine Kopie anlegen, z. B. `content-sicherung.json`.
+
+**Beim ersten Hochladen der ganzen Website:** Die Datei `.htaccess` mit hochladen. Sie beginnt mit einem Punkt und wird
+deshalb oft ausgeblendet (in FileZilla: Menü *Server* → „Anzeigen versteckter Dateien erzwingen“). Sie sorgt für schnelle
+Ladezeiten und dafür, dass die Seite nur Dateien vom eigenen Server lädt.
 
 ---
 
 ## 6. Und wenn ich mich vertippt habe?
 
-Keine Sorge, die Seite bleibt **nicht leer**. Bei einem Fehler in `content.json` zeigt sie automatisch
-die zuletzt ausgelieferten Standard-Texte an. Ihre Änderungen erscheinen dann aber auch nicht.
+Die Seite bleibt **nicht leer**. Bei einem Fehler in `content.json` zeigt sie automatisch die zuletzt ausgelieferten Texte.
+Ihre Änderungen erscheinen dann aber nicht. So finden Sie den Fehler:
 
-So finden Sie den Fehler:
-
-1. Den gesamten Inhalt von `content.json` kopieren.
-2. Auf **https://jsonlint.com** einfügen und auf „Validate JSON“ klicken.
-3. Die Seite zeigt die Zeile mit dem Fehler, meist ein fehlendes Komma oder Anführungszeichen.
-
-Wer mag, sieht die Meldung auch im Browser: Taste **F12** → Reiter **Konsole**. Dort steht auf Deutsch,
-in welcher Zeile der Fehler liegt.
+1. Den Inhalt von `content.json` auf **https://jsonlint.com** einfügen und „Validate JSON“ klicken.
+2. Dort steht die Zeile mit dem Fehler, meist ein fehlendes Komma oder Anführungszeichen.
 
 ---
 
 ## 7. Was steht NICHT in content.json?
 
-- **Impressum und Datenschutz** (`impressum.html`, `datenschutz.html`): Das sind Platzhalter. Sie müssen
-  vor der Veröffentlichung mit den echten Angaben gefüllt werden. Name, Adresse und Telefon kommen aber
-  auch dort automatisch aus `content.json`.
-- **Vorschau für Google und Messenger**: Titel und Beschreibung stehen zusätzlich oben in `index.html`,
-  weil manche Dienste (WhatsApp, Facebook) keine Skripte ausführen. Wer den Titel in `content.json`
-  ändert, sollte ihn dort ebenfalls anpassen (Zeilen mit `<title>` und `description`).
-- `assets/js/content-fallback.js` ist die Sicherheitskopie für den Notfall. **Bitte nicht bearbeiten.**
-
----
+- **Impressum und Datenschutz** (`impressum.html`, `datenschutz.html`): Das sind **Platzhalter**. Vor der Veröffentlichung mit den
+  echten Angaben füllen und prüfen lassen.
+- **Vorschau für Google und Messenger**: Titel und Beschreibung stehen zusätzlich oben in `index.html`.
+- `assets/js/content-fallback.js` ist die Sicherheitskopie. **Bitte nicht bearbeiten.**
 
 ## Wichtig beim Testen
 
-Die Website muss über einen Webserver laufen (also online oder mit einem lokalen Testserver).
-Öffnen Sie `index.html` per Doppelklick direkt vom Computer, zeigt der Browser nur die Standard-Texte,
-weil er aus Sicherheitsgründen `content.json` nicht lesen darf.
+Die Website muss über einen Webserver laufen (online oder mit einem lokalen Testserver).
+Per Doppelklick auf `index.html` zeigt der Browser nur die Sicherheitskopie der Texte.

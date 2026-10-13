@@ -3,58 +3,61 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<!-- SEO-Grundwerte fuer Suchmaschinen und Link-Vorschauen. Die Seite ueberschreibt Titel und
-     Beschreibung beim Laden mit den Werten aus content.json ("seo"). -->
-<title>Taste of India Kassel | Indisches Restaurant in der Wolfhager Straße</title>
-<meta name="description" content="Butter Chicken, Lamm Biryani und Saag Paneer: indische Küche in der Wolfhager Straße in Kassel. Abholen, liefern lassen oder reservieren unter 0561 97010337.">
-<meta name="theme-color" content="#F3E9DA">
-<meta property="og:type" content="restaurant.restaurant">
+<!-- SEO-Grundwerte. Beim Laden überschreibt die Seite Titel und Beschreibung mit den Werten aus content.json ("seo"). -->
+<title>Karma Specialty Coffee · Açaí, Matcha &amp; Kaffee in Langen</title>
+<meta name="description" content="Açaí Cups, Iced Matcha und Specialty Coffee in der Bahnstraße 4 in Langen (Hessen). Täglich von 9 bis 19 Uhr geöffnet.">
+<meta name="theme-color" content="#F5EDE3">
+<meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
-<meta property="og:title" content="Taste of India Kassel">
-<meta property="og:description" content="Indische Küche in der Wolfhager Straße 415, Kassel. 4,7 Sterne bei Google.">
+<meta property="og:title" content="Karma Specialty Coffee, Langen">
+<meta property="og:description" content="Açaí, Matcha &amp; Specialty Coffee in der Bahnstraße 4, Langen. Täglich 9–19 Uhr.">
 <meta property="og:image" content="assets/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
-<link rel="preload" href="assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/bodoni-moda.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="content.json" as="fetch" type="application/json" crossorigin>
-<link rel="preload" as="image" href="assets/img/hero-spices-m.webp" media="(max-width: 767px)" fetchpriority="high">
-<link rel="preload" as="image" href="assets/img/hero-spices.webp" media="(min-width: 768px)" fetchpriority="high">
-<link rel="stylesheet" href="assets/css/style.css?v=20260926-9">
+<link rel="preload" as="image" href="assets/hero/cup-karma.webp" fetchpriority="high">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Karma Specialty Coffee",
+  "image": "assets/img/og-image.jpg",
+  "address": { "@type": "PostalAddress", "streetAddress": "Bahnstraße 4", "postalCode": "63225", "addressLocality": "Langen (Hessen)", "addressCountry": "DE" },
+  "openingHours": "Mo-Su 09:00-19:00",
+  "servesCuisine": ["Açaí", "Matcha", "Kaffee", "Smoothies"],
+  "sameAs": ["https://www.instagram.com/yourkarmacoffee/"]
+}
+</script>
+<link rel="stylesheet" href="assets/css/style.css?v=7">
 <script>
   /* Bewegung nur, wenn der Besucher sie nicht im System abgeschaltet hat */
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion-ok');
 </script>
-<!-- Erst die Inhalte, dann die Animationen -->
-<script src="assets/js/content-fallback.js?v=20260926-9" defer></script>
-<script src="assets/js/content.js?v=20260926-9" defer></script>
+<!-- Erst die Inhalte, dann die Animationen. Alles liegt lokal, es gibt keine externen Verbindungen. -->
+<script src="assets/js/content-fallback.js?v=7" defer></script>
+<script src="assets/js/content.js?v=7" defer></script>
 <script src="assets/vendor/gsap.min.js" defer></script>
 <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/vendor/SplitText.min.js" defer></script>
 <script src="assets/vendor/lenis.min.js" defer></script>
-<script src="assets/js/motion.js?v=20260926-9" defer></script>
+<script src="assets/js/motion.js?v=7" defer></script>
 </head>
 <body>
 <svg class="sprite" aria-hidden="true" focusable="false">
-  <!-- UI-Icons: Phosphor Icons (MIT) -->
-<symbol id="i-phone" viewBox="0 0 256 256"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></symbol>
-<symbol id="i-navigation-arrow" viewBox="0 0 256 256"><path d="M237.33,106.21,61.41,41l-.16-.05A16,16,0,0,0,40.9,61.25a1,1,0,0,0,.05.16l65.26,175.92A15.77,15.77,0,0,0,121.28,248h.3a15.77,15.77,0,0,0,15-11.29l.06-.2,21.84-78,78-21.84.2-.06a16,16,0,0,0,.62-30.38ZM149.84,144.3a8,8,0,0,0-5.54,5.54L121.3,232l-.06-.17L56,56l175.82,65.22.16.06Z"/></symbol>
-<symbol id="i-shopping-bag" viewBox="0 0 256 256"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM176,88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z"/></symbol>
-<symbol id="i-arrow-up-right" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></symbol>
-<symbol id="i-star-fill" viewBox="0 0 256 256"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></symbol>
-<symbol id="i-clock" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></symbol>
-<symbol id="i-map-pin" viewBox="0 0 256 256"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></symbol>
-  <!-- Handgezeichnete Gewuerze -->
-  <symbol id="d-anise" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M28.6 22.1Q44.5 23.6 28.6 25.9Q38.8 38.4 25.9 28.6Q24.4 44.6 22.1 28.6Q9.6 38.9 19.4 25.9Q3.6 24.3 19.4 22.1Q9.3 9.8 22.1 19.4Q23.6 3.4 25.9 19.4Q38.6 9.2 28.6 22.1Z"/><circle cx="24" cy="24" r="2.2"/><path d="M33 24.2h3.4M24 33v3.2M15 23.8h-3.2M24.2 15v-3.3"/></g></symbol>
-  <symbol id="d-chili" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 38.6C14 31 22.6 22.4 33.8 16.3c3.7-2 6.4.2 4.3 3.3C31.2 29 21 36.4 12.7 40.3c-2.2 1-3.9.3-3.2-1.7Z"/><path d="M35.6 16.2c1.6-3.4 3.9-5.6 7.4-6.6"/><path d="M34 19.8c-5.8 5.9-12.4 11-19.6 14.8"/></g></symbol>
-  <symbol id="d-cardamom" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M24.4 5.6c8.4 8.1 8.9 27.5-.2 36.9C15.3 33.9 15.1 14.5 24.4 5.6Z"/><path d="M24.3 10.4c2.6 7.4 2.8 19.3-.2 28M20.4 15.8c-.6 5.4-.4 11.3.8 16.6"/><path d="M24.3 5.6c.3-1.6 1.1-2.6 2.4-3.2"/></g></symbol>
-  <symbol id="d-cinnamon" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8.2 30.4 36.3 13.8M12.3 36.8l28.2-16.5"/><path d="M8.2 30.4c-2.3 1.6-1.4 6.8 4.1 6.4"/><path d="M36.3 13.8c3.9-2.4 7 2.3 4.2 6.5"/><path d="M37.5 16.6c-.9 1.6.5 2.8 2 1.9"/></g></symbol>
-  <symbol id="d-leaf" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42.5V24.3"/><path d="M24 24.3c-8.1-1.6-12.6-9.3-8.3-15.6 3.6 1.9 5.9-2.2 8.2-2.4 2.4.1 4.5 4.3 8.2 2.3 4.4 6.4-.1 14.1-8.1 15.7Z"/><path d="M24 24.3V12.6M24 19l-4.2-4.1M24 17.2l4.5-4.4"/></g></symbol>
-  <!-- Kringel und Unterstreichungen -->
-  <symbol id="d-underline" viewBox="0 0 200 16"><path vector-effect="non-scaling-stroke" fill="none" stroke="currentColor" stroke-linecap="round" d="M3 11.2C33 4.6 61 3.5 92 7.2c26 3.1 44 6.1 70 3.9 13-1.1 24-3.6 35-6.8"/></symbol>
-  <symbol id="d-scribble" viewBox="0 0 160 44"><path vector-effect="non-scaling-stroke" fill="none" stroke="currentColor" stroke-linecap="round" d="M9.6 24.4C4.8 10.8 57.2 3.6 106.8 5.9c39 1.8 51.7 16.6 36.7 26.3-17.4 11.2-78.7 11.9-117.2 5.1C9 34.2 1.7 25.2 10.4 17.3c7.7-7 25.9-9.6 39.1-10.4"/></symbol>
+  <!-- UI-Icons: Phosphor Icons (MIT-Lizenz) -->
+  <symbol id="i-arrow-up-right" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></symbol>
+  <symbol id="i-map-pin" viewBox="0 0 256 256"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 256 256"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></symbol>
+  <symbol id="i-arrow-down" viewBox="0 0 256 256"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"/></symbol>
+  <!-- Wortmarke „THISISYOUR karma“ (nachgebaut nach dem Becheraufdruck) -->
+  <symbol id="wordmark" viewBox="-4 4 308 118"><path fill="currentColor" d="M2.4 10.8H10.9V38.0H16.3V10.8H24.8V5.8H2.4Z M34.6 23.2H57.5V18.2H34.6ZM54.0 5.8V38.0H59.4V5.8ZM32.4 5.8V38.0H37.8V5.8Z M70.3 5.8V38.0H75.8V5.8Z M88.7 27.6 84.6 30.5Q85.7 32.7 87.5 34.6Q89.3 36.4 91.7 37.6Q94.1 38.7 96.9 38.7Q99.0 38.7 100.9 38.0Q102.8 37.4 104.3 36.1Q105.9 34.9 106.8 33.1Q107.7 31.3 107.7 29.1Q107.7 27.0 106.9 25.4Q106.2 23.8 105.0 22.7Q103.8 21.5 102.4 20.7Q100.9 19.9 99.5 19.4Q96.9 18.5 95.3 17.6Q93.7 16.8 92.9 15.8Q92.2 14.8 92.2 13.6Q92.2 12.2 93.2 11.1Q94.3 10.1 96.5 10.1Q98.1 10.1 99.4 10.7Q100.6 11.3 101.5 12.4Q102.4 13.4 103.1 14.6L107.4 12.1Q106.6 10.4 105.2 8.9Q103.7 7.3 101.6 6.3Q99.5 5.2 96.6 5.2Q93.7 5.2 91.5 6.3Q89.2 7.4 87.8 9.4Q86.5 11.3 86.5 13.9Q86.5 16.2 87.4 17.8Q88.3 19.3 89.6 20.4Q90.9 21.5 92.4 22.2Q93.9 22.9 95.1 23.3Q97.1 24.1 98.6 24.8Q100.2 25.6 101.1 26.7Q101.9 27.8 101.9 29.5Q101.9 31.4 100.5 32.6Q99.2 33.8 96.9 33.8Q95.2 33.8 93.7 33.0Q92.2 32.3 90.9 30.9Q89.7 29.5 88.7 27.6Z M116.8 5.8V38.0H122.3V5.8Z M135.2 27.6 131.2 30.5Q132.3 32.7 134.1 34.6Q135.9 36.4 138.3 37.6Q140.7 38.7 143.5 38.7Q145.6 38.7 147.5 38.0Q149.4 37.4 150.9 36.1Q152.4 34.9 153.3 33.1Q154.2 31.3 154.2 29.1Q154.2 27.0 153.5 25.4Q152.8 23.8 151.6 22.7Q150.4 21.5 149.0 20.7Q147.5 19.9 146.0 19.4Q143.5 18.5 141.9 17.6Q140.3 16.8 139.5 15.8Q138.7 14.8 138.7 13.6Q138.7 12.2 139.8 11.1Q140.9 10.1 143.1 10.1Q144.7 10.1 145.9 10.7Q147.1 11.3 148.1 12.4Q149.0 13.4 149.6 14.6L154.0 12.1Q153.2 10.4 151.7 8.9Q150.3 7.3 148.2 6.3Q146.0 5.2 143.2 5.2Q140.3 5.2 138.0 6.3Q135.8 7.4 134.4 9.4Q133.1 11.3 133.1 13.9Q133.1 16.2 134.0 17.8Q134.8 19.3 136.2 20.4Q137.5 21.5 139.0 22.2Q140.4 22.9 141.6 23.3Q143.7 24.1 145.2 24.8Q146.8 25.6 147.6 26.7Q148.5 27.8 148.5 29.5Q148.5 31.4 147.1 32.6Q145.7 33.8 143.5 33.8Q141.7 33.8 140.2 33.0Q138.7 32.3 137.5 30.9Q136.3 29.5 135.2 27.6Z M181.1 5.8 173.6 19.6 166.2 5.8H160.0L170.9 24.5V38.0H176.4V24.4L187.3 5.8Z M198.6 21.9Q198.6 18.6 200.0 16.0Q201.4 13.4 203.9 11.9Q206.4 10.5 209.5 10.5Q212.8 10.5 215.2 11.9Q217.7 13.4 219.1 16.0Q220.5 18.6 220.5 21.9Q220.5 25.2 219.1 27.8Q217.7 30.4 215.2 31.9Q212.7 33.4 209.5 33.4Q206.4 33.4 203.9 31.9Q201.4 30.4 200.0 27.8Q198.6 25.2 198.6 21.9ZM192.8 21.9Q192.8 25.5 194.1 28.6Q195.3 31.7 197.6 33.9Q199.8 36.2 202.9 37.4Q205.9 38.7 209.5 38.7Q213.2 38.7 216.2 37.4Q219.3 36.2 221.5 33.9Q223.8 31.7 225.0 28.6Q226.3 25.5 226.3 21.9Q226.3 18.3 225.0 15.3Q223.8 12.2 221.5 10.0Q219.2 7.8 216.2 6.5Q213.2 5.2 209.5 5.2Q206.0 5.2 202.9 6.5Q199.9 7.8 197.6 10.0Q195.3 12.2 194.1 15.3Q192.8 18.3 192.8 21.9Z M235.0 5.8V27.4Q235.0 30.1 235.9 32.2Q236.7 34.3 238.3 35.7Q239.8 37.2 242.0 38.0Q244.2 38.8 246.7 38.8Q249.3 38.8 251.5 38.0Q253.6 37.2 255.2 35.7Q256.8 34.3 257.6 32.2Q258.5 30.1 258.5 27.4V5.8H253.0V27.2Q253.0 30.1 251.4 32.0Q249.9 33.8 246.7 33.8Q243.7 33.8 242.0 32.0Q240.4 30.1 240.4 27.2V5.8Z M275.7 22.7 285.9 38.0H292.5L281.6 22.7ZM269.1 5.8V38.0H274.5V5.8ZM272.3 10.5H278.7Q280.6 10.5 282.0 11.2Q283.4 11.8 284.2 13.0Q285.0 14.2 285.0 15.9Q285.0 17.6 284.2 18.9Q283.4 20.1 282.0 20.7Q280.6 21.3 278.7 21.3H272.3V25.8H279.0Q282.5 25.8 285.1 24.6Q287.7 23.3 289.1 21.1Q290.6 18.8 290.6 15.8Q290.6 12.8 289.1 10.5Q287.7 8.3 285.1 7.1Q282.5 5.8 279.0 5.8H272.3Z"/><path fill="currentColor" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M56.6 96.7Q56.6 98.5 55.9 99.2Q55.2 100.0 53.5 100.0H37.7Q36.0 100.0 35.3 99.2Q34.6 98.5 34.6 96.7Q34.6 94.9 35.3 94.1Q36.0 93.4 37.7 93.4H41.2L29.0 78.8L20.1 86.6V93.4H23.6Q25.3 93.4 26.0 94.1Q26.7 94.9 26.7 96.7Q26.7 98.5 26.0 99.2Q25.3 100.0 23.6 100.0H7.3Q5.7 100.0 5.0 99.2Q4.2 98.5 4.2 96.7Q4.2 94.9 5.0 94.1Q5.7 93.4 7.3 93.4H12.7V42.6H6.3Q4.7 42.6 4.0 41.8Q3.3 41.1 3.3 39.3Q3.3 37.5 4.0 36.7Q4.7 35.9 6.3 35.9H17.0Q18.7 35.9 19.4 36.7Q20.1 37.5 20.1 39.3V77.9L38.7 61.5H35.2Q33.5 61.5 32.8 60.8Q32.1 60.0 32.1 58.2Q32.1 56.4 32.8 55.6Q33.5 54.9 35.2 54.9H51.5Q53.2 54.9 53.9 55.6Q54.6 56.4 54.6 58.2Q54.6 60.0 53.9 60.8Q53.2 61.5 51.5 61.5H48.6L34.3 74.2L50.7 93.4H53.5Q55.2 93.4 55.9 94.1Q56.6 94.9 56.6 96.7Z M108.5 70.1V89.5Q108.5 93.4 111.7 93.4H113.4Q115.1 93.4 115.8 94.1Q116.5 94.9 116.5 96.7Q116.5 98.5 115.8 99.2Q115.1 100.0 113.4 100.0H110.3Q107.1 100.0 104.9 98.4Q102.6 96.8 101.9 93.8Q97.9 97.3 93.2 99.2Q88.6 101.1 83.3 101.1Q78.4 101.1 74.6 99.4Q70.8 97.7 68.7 94.5Q66.6 91.3 66.6 86.8Q66.6 79.1 72.1 75.4Q77.6 71.7 86.3 71.7Q94.1 71.7 101.2 74.2V70.1Q101.2 65.3 98.5 63.1Q95.8 60.9 89.9 60.9Q86.3 60.9 82.3 61.9Q78.4 62.9 74.8 64.7Q74.0 65.2 73.3 65.2Q71.7 65.2 70.6 62.8Q70.1 61.7 70.1 60.9Q70.1 59.2 71.9 58.3Q76.0 56.1 80.7 55.0Q85.4 53.8 90.1 53.8Q99.3 53.8 103.9 57.9Q108.5 62.0 108.5 70.1ZM74.3 86.7Q74.3 90.2 76.7 92.2Q79.2 94.2 83.6 94.2Q93.4 94.2 101.2 86.1V80.8Q97.9 79.7 94.0 79.2Q90.2 78.6 86.4 78.6Q80.8 78.6 77.5 80.5Q74.3 82.5 74.3 86.7Z M172.0 55.8Q173.9 56.9 173.9 58.8Q173.9 59.7 173.5 60.8Q172.5 63.6 170.7 63.6Q169.9 63.6 169.3 63.2Q166.9 61.9 164.2 61.9Q159.8 61.9 155.3 65.0Q150.9 68.0 148.0 73.1Q145.2 78.2 145.2 83.9V93.4H161.6Q163.3 93.4 164.0 94.1Q164.7 94.9 164.7 96.7Q164.7 98.5 164.0 99.2Q163.3 100.0 161.6 100.0H130.2Q128.5 100.0 127.8 99.2Q127.1 98.5 127.1 96.7Q127.1 94.9 127.8 94.1Q128.5 93.4 130.2 93.4H137.8V61.5H131.6Q130.0 61.5 129.3 60.8Q128.6 60.0 128.6 58.2Q128.6 56.4 129.3 55.6Q130.0 54.9 131.6 54.9H141.6Q143.3 54.9 144.0 55.6Q144.7 56.4 144.7 58.2V68.1Q147.0 63.8 150.3 60.5Q153.7 57.3 157.4 55.6Q161.2 53.8 164.8 53.8Q168.7 53.8 172.0 55.8Z M241.1 96.7Q241.1 98.5 240.4 99.2Q239.7 100.0 238.0 100.0H230.8Q229.1 100.0 228.4 99.2Q227.7 98.5 227.7 96.7V67.8Q227.7 64.4 226.6 62.7Q225.5 61.0 223.0 61.0Q220.8 61.0 218.8 63.2Q216.8 65.3 215.7 69.1Q214.6 72.9 214.6 77.7V93.4H217.3Q219.0 93.4 219.7 94.1Q220.4 94.9 220.4 96.7Q220.4 98.5 219.7 99.2Q219.0 100.0 217.3 100.0H210.3Q208.6 100.0 207.9 99.2Q207.2 98.5 207.2 96.7V67.8Q207.2 64.4 206.1 62.7Q205.0 61.0 202.6 61.0Q200.3 61.0 198.3 63.2Q196.4 65.3 195.2 69.1Q194.1 72.9 194.1 77.7V93.4H196.6Q198.3 93.4 199.0 94.1Q199.7 94.9 199.7 96.7Q199.7 98.5 199.0 99.2Q198.3 100.0 196.6 100.0H182.8Q181.1 100.0 180.4 99.2Q179.7 98.5 179.7 96.7Q179.7 94.9 180.4 94.1Q181.1 93.4 182.8 93.4H186.8V61.5H182.8Q181.1 61.5 180.4 60.8Q179.7 60.0 179.7 58.2Q179.7 56.4 180.4 55.6Q181.1 54.9 182.8 54.9H190.0Q191.7 54.9 192.4 55.6Q193.1 56.4 193.1 58.2V63.0Q195.2 58.4 198.1 56.1Q201.1 53.8 204.5 53.8Q207.8 53.8 210.3 56.1Q212.8 58.3 213.7 62.6Q218.0 53.8 224.9 53.8Q227.8 53.8 230.1 55.2Q232.3 56.7 233.7 59.6Q235.0 62.6 235.0 66.9V93.4H238.0Q239.7 93.4 240.4 94.1Q241.1 94.9 241.1 96.7Z M288.4 70.1V89.5Q288.4 93.4 291.6 93.4H293.3Q295.0 93.4 295.7 94.1Q296.4 94.9 296.4 96.7Q296.4 98.5 295.7 99.2Q295.0 100.0 293.3 100.0H290.2Q287.0 100.0 284.7 98.4Q282.5 96.8 281.8 93.8Q277.8 97.3 273.1 99.2Q268.5 101.1 263.2 101.1Q258.3 101.1 254.5 99.4Q250.7 97.7 248.6 94.5Q246.4 91.3 246.4 86.8Q246.4 79.1 252.0 75.4Q257.5 71.7 266.2 71.7Q274.0 71.7 281.1 74.2V70.1Q281.1 65.3 278.4 63.1Q275.7 60.9 269.8 60.9Q266.2 60.9 262.2 61.9Q258.3 62.9 254.7 64.7Q253.9 65.2 253.2 65.2Q251.6 65.2 250.5 62.8Q250.0 61.7 250.0 60.9Q250.0 59.2 251.8 58.3Q255.9 56.1 260.6 55.0Q265.3 53.8 270.0 53.8Q279.2 53.8 283.8 57.9Q288.4 62.0 288.4 70.1ZM254.2 86.7Q254.2 90.2 256.6 92.2Q259.1 94.2 263.5 94.2Q273.2 94.2 281.1 86.1V80.8Q277.7 79.7 273.9 79.2Q270.1 78.6 266.3 78.6Q260.6 78.6 257.4 80.5Q254.2 82.5 254.2 86.7Z"/></symbol>
 </svg>
 
 <a class="skip" href="#inhalt" data-c="bedienhilfen.zum_inhalt_springen"></a>
@@ -62,164 +65,177 @@
 <div class="progress" aria-hidden="true"><span></span></div>
 
 <header class="nav" data-nav>
-  <a class="nav__brand" href="#top" data-c="restaurant.name"></a>
+  <a class="nav__brand" href="#top" data-attr="aria-label=cafe.name">
+    <svg class="nav__mark" viewBox="-4 4 308 118" aria-hidden="true"><use href="#wordmark"/></svg>
+  </a>
   <nav class="nav__links" data-attr="aria-label=bedienhilfen.hauptnavigation">
-    <a class="nav__link" href="#speisekarte" data-c="navigation.speisekarte"></a>
-    <a class="nav__link" href="#besuch" data-c="navigation.oeffnungszeiten"></a>
-    <a class="nav__call" data-tel data-attr="aria-label=navigation.anrufen"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></a>
-    <a class="btn btn--small" data-order target="_blank" rel="noopener">
-      <span data-c="navigation.bestellen"></span>
-      <span class="btn__icon" aria-hidden="true"><svg class="ico"><use href="#i-arrow-up-right"/></svg></span>
-    </a>
+    <a class="nav__link" href="#acai" data-c="navigation.acai"></a>
+    <a class="nav__link" href="#matcha" data-c="navigation.matcha"></a>
+    <a class="nav__link" href="#karte" data-c="navigation.karte"></a>
+    <a class="nav__link" href="#besuch" data-c="navigation.besuch"></a>
   </nav>
+  <a class="nav__status" href="#besuch" data-status><i class="dot" aria-hidden="true"></i><span data-status-text>Täglich 9–19 Uhr</span></a>
 </header>
 
 <main id="inhalt">
-  <!-- 1 · Hero -->
-  <section class="hero" id="top">
-    <div class="hero__media">
-      <picture class="hero__pic">
-        <source media="(max-width: 767px)" data-src-from="hero.bild_mobil" srcset="assets/img/hero-spices-m.webp">
-        <img class="hero__img" src="assets/img/hero-spices.webp" data-src-from="hero.bild" data-attr="alt=hero.bild_beschreibung" alt="" width="1376" height="768" fetchpriority="high" decoding="async">
-      </picture>
-    </div>
-    <div class="hero__inner">
-      <h1 class="hero__title" data-rich="hero.titel" data-rich-italic="hero.titel_kursives_wort" data-rich-underline="hero.titel_unterstrichenes_wort"></h1>
-      <p class="hero__claim" data-c="hero.claim"></p>
+
+  <!-- 1 · Hero: Name des Cafés in goldener 3D-Schrift, darunter die vier Becher -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <h1 class="hero__title" id="hero-title" data-attr="aria-label=cafe.name" aria-label="Karma Specialty Coffee">
+      <span class="gold gold--xl" data-hero-line aria-hidden="true" data-c="hero.titel_zeile_1">Karma</span>
+      <span class="gold gold--sm" data-hero-line aria-hidden="true" data-c="hero.titel_zeile_2">Specialty Coffee</span>
+    </h1>
+    <figure class="hero__cups" data-hero-cups>
+      <img class="hero__cup hero__cup--matcha" src="assets/hero/cup-matcha.webp" width="367" height="658" alt="" data-attr="alt=hero.becher.0" decoding="async" fetchpriority="high">
+      <img class="hero__cup hero__cup--mango" src="assets/hero/cup-mango.webp" width="383" height="651" alt="" data-attr="alt=hero.becher.1" decoding="async" fetchpriority="high">
+      <img class="hero__cup hero__cup--karma" src="assets/hero/cup-karma.webp" width="378" height="646" alt="" data-attr="alt=hero.becher.2" decoding="async" fetchpriority="high">
+      <img class="hero__cup hero__cup--pink" src="assets/hero/cup-pink.webp" width="384" height="743" alt="" data-attr="alt=hero.becher.3" decoding="async" fetchpriority="high">
+      <figcaption class="render-badge" data-c="bildkennzeichnung.bild_text">Symbolbild</figcaption>
+    </figure>
+    <div class="hero__foot" data-hero-foot>
+      <p class="hero__claim" data-c="hero.claim">Açaí, Matcha &amp; Specialty Coffee mitten in Langen.</p>
+      <a class="btn hero__btn" href="#karte">
+        <span data-c="hero.karte_button">Zur Karte</span>
+        <span class="btn__icon" aria-hidden="true"><svg class="ico"><use href="#i-arrow-down"/></svg></span>
+      </a>
       <a class="hero__rating" data-google target="_blank" rel="noopener">
-        <span class="stars" data-stars="5" aria-hidden="true"></span>
-        <strong data-c="restaurant.google_sterne"></strong>
-        <span><span data-c="restaurant.google_anzahl_rezensionen"></span> <span data-c="hero.bewertung_text"></span></span>
+        <span class="stars" aria-hidden="true"></span>
+        <strong data-c="cafe.google_sterne">4,4</strong>
+        <span><span data-c="cafe.google_anzahl_bewertungen">103</span> <span data-c="hero.bewertung_text">Google-Bewertungen</span></span>
       </a>
     </div>
-    <div class="hero__cue" aria-hidden="true"><span data-c="hero.scroll_hinweis"></span><i></i></div>
-    <p class="ki-badge" data-ki="hero.ki_generiert"></p>
   </section>
 
-  <!-- 1b · Galerie: PLATZHALTER. Die Bilder sind lizenzfreie Stockfotos und zeigen nicht das Restaurant;
-       sie werden später durch echte Fotos ersetzt (Anleitung: LIES-MICH.md, Abschnitt „Galerie“).
-       Bildquellen (alle Pexels, Pexels-Lizenz: kostenlos, kommerziell nutzbar, keine Namensnennung nötig):
-       platzhalter-ambiente-1.jpg      Lakshmi Raj          https://www.pexels.com/photo/39068397/
-       platzhalter-gewuerzmarkt.jpg    AXP Photography      https://www.pexels.com/photo/19227962/
-       platzhalter-tandoor.jpg         Valeria Boltneva     https://www.pexels.com/photo/32558924/
-       platzhalter-naan.jpg            Kunal Lakhotia       https://www.pexels.com/photo/28674556/
-       platzhalter-ambiente-2.jpg      Shyam Srivastava     https://www.pexels.com/photo/33321182/
-       platzhalter-gedeckter-tisch.jpg khezez               https://www.pexels.com/photo/36799070/ -->
-  <section class="gallery" id="impressionen" aria-labelledby="gallery-title" data-gallery>
-    <div class="gallery__intro" data-gallery-intro>
-      <h2 class="h2" id="gallery-title" data-c="galerie.titel"></h2>
-      <p class="lead" data-c="galerie.text"></p>
-      <p class="placeholder-note" data-c="galerie.platzhalter_hinweis"></p>
-    </div>
-    <div class="gallery__pin" tabindex="0" role="region" data-attr="aria-label=bedienhilfen.galerie_label" data-gallery-pin>
-      <div class="gallery__track" data-gallery-track></div>
+  <!-- 2 · Highlight Açaí (lila) -->
+  <section class="spot spot--acai" id="acai" aria-labelledby="spot-acai" data-spot>
+    <p class="spot__word" aria-hidden="true" data-spot-word data-c="highlights.eintraege.0.hintergrundwort"></p>
+    <div class="wrap spot__grid">
+      <figure class="spot__media" data-spot-media>
+        <img class="spot__cup" src="assets/hero/cup-karma.webp" width="378" height="646" alt="" data-attr="alt=highlights.eintraege.0.bild_beschreibung" loading="lazy" decoding="async">
+        <figcaption class="render-badge" data-c="bildkennzeichnung.bild_text"></figcaption>
+      </figure>
+      <article class="spot__copy" data-spot-copy>
+        <p class="kicker spot__kicker"><span data-c="highlights.titel"></span><span class="spot__count">01 / 02</span></p>
+        <h2 class="spot__name" id="spot-acai" data-rich="highlights.eintraege.0.name" data-rich-italic="highlights.eintraege.0.kursiv"></h2>
+        <p class="spot__sub" data-c="highlights.eintraege.0.untertitel"></p>
+        <p class="spot__text" data-c="highlights.eintraege.0.beschreibung"></p>
+        <p class="spot__label" data-c="highlights.zutaten_titel"></p>
+        <ul class="spot__ingredients" data-list="highlights.eintraege.0.zutaten"></ul>
+        <p class="spot__price">
+          <span class="spot__size"><span data-c="highlights.eintraege.0.groesse"></span> · <span data-c="highlights.preis_hinweis"></span></span>
+          <strong class="gold gold--price" data-c="highlights.eintraege.0.preis"></strong>
+        </p>
+      </article>
     </div>
   </section>
 
-  <!-- 2-4 · Gerichte-Szenen (werden aus content.json "gerichte" erzeugt) -->
-  <div class="dishes" data-dishes></div>
+  <!-- 3 · Highlight Matcha (grün) -->
+  <section class="spot spot--matcha" id="matcha" aria-labelledby="spot-matcha" data-spot>
+    <p class="spot__word" aria-hidden="true" data-spot-word data-c="highlights.eintraege.1.hintergrundwort"></p>
+    <div class="wrap spot__grid">
+      <article class="spot__copy" data-spot-copy>
+        <p class="kicker spot__kicker"><span data-c="highlights.titel"></span><span class="spot__count">02 / 02</span></p>
+        <h2 class="spot__name" id="spot-matcha" data-rich="highlights.eintraege.1.name" data-rich-italic="highlights.eintraege.1.kursiv"></h2>
+        <p class="spot__sub" data-c="highlights.eintraege.1.untertitel"></p>
+        <p class="spot__text" data-c="highlights.eintraege.1.beschreibung"></p>
+        <p class="spot__label" data-c="highlights.zutaten_titel"></p>
+        <ul class="spot__ingredients" data-list="highlights.eintraege.1.zutaten"></ul>
+        <p class="spot__price">
+          <span class="spot__size"><span data-c="highlights.eintraege.1.groesse"></span> · <span data-c="highlights.preis_hinweis"></span></span>
+          <strong class="gold gold--price" data-c="highlights.eintraege.1.preis"></strong>
+        </p>
+      </article>
+      <figure class="spot__media" data-spot-media>
+        <img class="spot__cup" src="assets/hero/cup-matcha.webp" width="367" height="658" alt="" data-attr="alt=highlights.eintraege.1.bild_beschreibung" loading="lazy" decoding="async">
+        <figcaption class="render-badge" data-c="bildkennzeichnung.bild_text"></figcaption>
+      </figure>
+    </div>
+  </section>
 
-  <!-- 5 · Speisekarte -->
-  <section class="menu" id="speisekarte" aria-labelledby="menu-title">
+  <!-- 4 · Speisekarte (Beispiel), direkt nach den Highlights -->
+  <section class="menu" id="karte" aria-labelledby="menu-title">
     <div class="wrap">
       <div class="menu__head">
-        <h2 class="h2" id="menu-title"><span data-c="speisekarte.titel"></span><svg class="squiggle squiggle--curry" aria-hidden="true" preserveAspectRatio="none"><use href="#d-underline"/></svg></h2>
-        <p class="lead" data-c="speisekarte.einleitung"></p>
+        <h2 class="h2" id="menu-title" data-c="speisekarte.titel" data-reveal></h2>
+        <p class="lead" data-c="speisekarte.einleitung" data-reveal></p>
+        <p class="note" data-c="speisekarte.hinweis" data-reveal></p>
       </div>
-      <ul class="menu__list" data-menu></ul>
-      <div class="menu__foot">
-        <p class="note" data-c="speisekarte.hinweis"></p>
-        <a class="btn" data-order target="_blank" rel="noopener">
-          <span data-c="speisekarte.button_text"></span>
-          <span class="btn__icon" aria-hidden="true"><svg class="ico"><use href="#i-arrow-up-right"/></svg></span>
-        </a>
-      </div>
+      <nav class="menu__tabs" aria-label="Kategorien" data-menu-tabs></nav>
+      <div class="menu__grid" data-menu></div>
     </div>
   </section>
 
-  <!-- 6 · Bewertungen -->
-  <section class="reviews" id="bewertungen" aria-labelledby="reviews-title">
-    <div class="wrap reviews__head">
-      <h2 class="h2" id="reviews-title" data-c="bewertungen.titel"></h2>
-      <div class="score">
-        <span class="score__num" data-c="restaurant.google_sterne" data-count></span>
-        <span class="score__meta">
-          <span class="stars stars--lg" data-stars="5" aria-hidden="true"></span>
-          <span><span data-c="bewertungen.sterne_text"></span>, <span data-c="restaurant.google_anzahl_rezensionen"></span> <span data-c="hero.bewertung_text"></span></span>
-        </span>
-      </div>
+  <!-- 5 · Impressionen: gemeinfreie Stimmungsbilder (CC0, Nachweis in BILDQUELLEN.md) -->
+  <section class="gallery" id="impressionen" aria-labelledby="gallery-title" data-gallery>
+    <div class="wrap gallery__head">
+      <h2 class="h2" id="gallery-title" data-c="impressionen.titel" data-reveal></h2>
+      <p class="lead" data-c="impressionen.text" data-reveal></p>
+      <a class="textlink" data-instagram target="_blank" rel="noopener" data-reveal>
+        <svg class="ico" aria-hidden="true"><use href="#i-instagram"/></svg>
+        <span data-c="impressionen.instagram_text"></span>
+        <span class="textlink__handle" data-c="cafe.instagram_name"></span>
+      </a>
     </div>
-    <div class="wrap"><p class="placeholder-note" data-c="bewertungen.platzhalter_hinweis"></p></div>
-    <div class="marquee" data-marquee>
-      <div class="marquee__track" data-reviews></div>
-    </div>
-    <div class="wrap reviews__foot">
-      <a class="textlink" data-google target="_blank" rel="noopener"><span data-c="bewertungen.google_link_text"></span><svg class="ico" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
-    </div>
+    <ul class="wrap gallery__grid" data-gallery-grid data-attr="aria-label=bedienhilfen.galerie_label"></ul>
   </section>
 
-  <!-- 7 · Standort & Oeffnungszeiten -->
+  <!-- 6 · Besuch uns -->
   <section class="visit" id="besuch" aria-labelledby="visit-title">
     <div class="wrap visit__grid">
-      <div class="visit__place">
-        <h2 class="h2" id="visit-title" data-c="standort.titel"></h2>
-        <address class="visit__address">
-          <span data-c="restaurant.name"></span>
-          <span class="visit__street" data-c="restaurant.strasse"></span>
-          <span><span data-c="restaurant.plz"></span> <span data-c="restaurant.ort"></span></span>
+      <div class="visit__main">
+        <p class="kicker" data-c="besuch.kicker" data-reveal></p>
+        <h2 class="visit__title" id="visit-title" data-rich="besuch.titel" data-rich-italic="besuch.kursiv"></h2>
+        <p class="lead" data-c="besuch.text" data-reveal></p>
+        <address class="visit__address" data-reveal>
+          <span data-c="cafe.name"></span>
+          <span class="visit__street" data-c="cafe.strasse"></span>
+          <span><span data-c="cafe.plz"></span> <span data-c="cafe.ort"></span></span>
         </address>
-        <p class="status" data-status></p>
-        <div class="actions">
-          <a class="btn" data-tel>
-            <span data-c="standort.anrufen_button"></span>
-            <span class="btn__icon" aria-hidden="true"><svg class="ico"><use href="#i-phone"/></svg></span>
+        <div class="actions" data-reveal>
+          <a class="btn" data-route target="_blank" rel="noopener">
+            <span data-c="besuch.route_button"></span>
+            <span class="btn__icon" aria-hidden="true"><svg class="ico"><use href="#i-arrow-up-right"/></svg></span>
           </a>
-          <a class="btn btn--ghost" data-route target="_blank" rel="noopener">
-            <span data-c="standort.route_button"></span>
-            <span class="btn__icon" aria-hidden="true"><svg class="ico"><use href="#i-navigation-arrow"/></svg></span>
+          <a class="btn btn--ghost" data-instagram target="_blank" rel="noopener">
+            <span data-c="besuch.instagram_button"></span>
+            <span class="btn__icon" aria-hidden="true"><svg class="ico"><use href="#i-instagram"/></svg></span>
           </a>
         </div>
-        <p class="visit__phone"><a data-tel data-c="restaurant.telefon_anzeige"></a></p>
       </div>
-      <div class="visit__hours" id="oeffnungszeiten">
-        <h3 class="h3" data-c="oeffnungszeiten.titel"></h3>
-        <dl class="hours" data-hours></dl>
+      <div class="visit__side">
+        <div class="visit__block" data-reveal>
+          <h3 class="visit__h3" data-c="oeffnungszeiten.titel"></h3>
+          <p class="visit__big" data-c="oeffnungszeiten.zusammenfassung"></p>
+          <p class="status" data-status-long></p>
+          <dl class="hours" data-hours></dl>
+        </div>
+        <a class="visit__block visit__rating" data-google target="_blank" rel="noopener" data-reveal>
+          <span class="visit__score" data-c="cafe.google_sterne"></span>
+          <span class="visit__rating-meta">
+            <span class="stars stars--lg" aria-hidden="true"></span>
+            <span><span data-c="cafe.google_anzahl_bewertungen"></span> <span data-c="besuch.bewertungen_wort"></span> <span data-c="besuch.bewertung_text"></span></span>
+          </span>
+          <svg class="ico visit__arrow" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+        </a>
       </div>
     </div>
-  </section>
-
-  <!-- 8 · Abschluss -->
-  <section class="finale" aria-labelledby="finale-title">
-    <svg class="finale__anise" aria-hidden="true"><use href="#d-anise"/></svg>
-    <div class="wrap finale__inner">
-      <h2 class="finale__title" id="finale-title" data-rich="abschluss.titel" data-rich-italic="abschluss.kursives_wort"></h2>
-      <p class="lead" data-c="abschluss.text"></p>
-      <div class="actions actions--center">
-        <a class="btn btn--lg" data-order target="_blank" rel="noopener">
-          <span data-c="abschluss.bestellen_button"></span>
-          <span class="btn__icon" aria-hidden="true"><svg class="ico"><use href="#i-shopping-bag"/></svg></span>
-        </a>
-        <a class="btn btn--lg btn--ghost" data-tel>
-          <span data-c="abschluss.anrufen_button"></span>
-          <span class="btn__icon" aria-hidden="true"><svg class="ico"><use href="#i-phone"/></svg></span>
-        </a>
-      </div>
+    <div class="visit__mark" aria-hidden="true" data-visit-mark>
+      <svg viewBox="-4 4 308 118"><use href="#wordmark"/></svg>
     </div>
   </section>
 </main>
 
 <footer class="footer">
   <div class="wrap footer__grid">
-    <p class="footer__brand" data-c="restaurant.name"></p>
-    <p class="footer__addr">
-      <span data-c="restaurant.strasse"></span>, <span data-c="restaurant.plz"></span> <span data-c="restaurant.ort"></span><br>
-      <a data-tel data-c="restaurant.telefon_anzeige"></a>
-    </p>
-    <nav class="footer__links">
+    <p class="footer__brand" data-c="cafe.name"></p>
+    <p class="footer__addr"><span data-c="cafe.strasse"></span>, <span data-c="cafe.plz"></span> <span data-c="cafe.ort"></span></p>
+    <nav class="footer__links" aria-label="Rechtliches">
       <a data-attr="href=footer.impressum_link" data-c="footer.impressum_text"></a>
       <a data-attr="href=footer.datenschutz_link" data-c="footer.datenschutz_text"></a>
+      <a data-instagram target="_blank" rel="noopener" data-c="cafe.instagram_name"></a>
     </nav>
-    <p class="footer__ki" data-ki-footer></p>
+    <p class="footer__note" data-render-footer></p>
+    <p class="footer__note" data-c="footer.demo_hinweis"></p>
     <p class="footer__copy" data-c="footer.copyright"></p>
   </div>
 </footer>

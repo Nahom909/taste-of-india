@@ -1,309 +1,200 @@
 {
-  "_anleitung": "Alle Texte der Website stehen in dieser Datei. Nur den Text zwischen den Anführungszeichen rechts vom Doppelpunkt ändern. Mehr dazu in LIES-MICH.md.",
-  "restaurant": {
-    "name": "Taste of India",
-    "beschreibung_kurz": "Indisches Restaurant in Kassel",
-    "telefon_anzeige": "0561 97010337",
-    "telefon_waehlen": "+4956197010337",
-    "strasse": "Wolfhager Str. 415",
-    "plz": "34128",
-    "ort": "Kassel",
-    "route_link": "https://www.google.com/maps/search/?api=1&query=Taste+of+India+Wolfhager+Str.+415+34128+Kassel",
-    "bestellen_link": "https://www.lieferando.de/speisekarte/taste-of-india-kassel-34128",
-    "google_sterne": "4,7",
-    "google_anzahl_rezensionen": "37",
-    "google_link": "https://www.google.com/maps/search/?api=1&query=Taste+of+India+Wolfhager+Str.+415+Kassel"
+  "_anleitung": "Alle Texte, Preise und Öffnungszeiten der Website stehen in dieser Datei. Nur den Text zwischen den Anführungszeichen rechts vom Doppelpunkt ändern. Mehr dazu in LIES-MICH.md.",
+  "cafe": {
+    "name": "Karma Specialty Coffee",
+    "kurzname": "Karma",
+    "slogan_auf_becher": "This is your Karma",
+    "strasse": "Bahnstraße 4",
+    "plz": "63225",
+    "ort": "Langen (Hessen)",
+    "instagram_name": "@yourkarmacoffee",
+    "instagram_link": "https://www.instagram.com/yourkarmacoffee/",
+    "route_link": "https://www.google.com/maps/search/?api=1&query=Karma+Specialty+Coffee+Bahnstra%C3%9Fe+4+63225+Langen",
+    "google_sterne": "4,4",
+    "google_anzahl_bewertungen": "103",
+    "google_link": "https://www.google.com/maps/search/?api=1&query=Karma+Specialty+Coffee+Bahnstra%C3%9Fe+4+63225+Langen"
   },
   "seo": {
-    "seitentitel": "Taste of India Kassel | Indisches Restaurant in der Wolfhager Straße",
-    "beschreibung": "Butter Chicken, Lamm Biryani und Saag Paneer: indische Küche in der Wolfhager Straße in Kassel. Abholen, liefern lassen oder reservieren unter 0561 97010337."
+    "seitentitel": "Karma Specialty Coffee · Açaí, Matcha & Kaffee in Langen",
+    "beschreibung": "Açaí Cups, Iced Matcha und Specialty Coffee in der Bahnstraße 4 in Langen (Hessen). Täglich von 9 bis 19 Uhr geöffnet."
   },
   "navigation": {
-    "speisekarte": "Speisekarte",
-    "oeffnungszeiten": "Öffnungszeiten",
-    "bestellen": "Bestellen",
-    "anrufen": "Anrufen"
-  },
-  "ki_kennzeichnung": {
-    "bild_text": "KI-generiertes Symbolbild",
-    "footer_text_anzeigen": true,
-    "footer_text": "Die Food-Abbildungen auf dieser Website sind KI-generierte Symbolbilder und können vom tatsächlichen Gericht abweichen."
+    "acai": "Açaí",
+    "matcha": "Matcha",
+    "karte": "Karte",
+    "besuch": "Besuch",
+    "heute_offen": "Heute geöffnet",
+    "heute_zu": "Gerade geschlossen",
+    "bis": "bis",
+    "ab": "ab",
+    "uhr": "Uhr"
   },
   "hero": {
-    "titel": "Taste of India",
-    "titel_kursives_wort": "of",
-    "titel_unterstrichenes_wort": "India",
-    "claim": "Indische Küche in Kassel. Zum Abholen, zur Lieferung und vor Ort.",
-    "bewertung_text": "Google-Rezensionen",
-    "scroll_hinweis": "Scrollen",
-    "bild": "assets/img/hero-spices.webp",
-    "bild_mobil": "assets/img/hero-spices-m.webp",
-    "bild_beschreibung": "Indische Gewürze von oben: Kurkuma, Chili, Zimt, Kardamom und Sternanis auf hellem Leinen",
-    "ki_generiert": true
+    "titel_zeile_1": "Karma",
+    "titel_zeile_2": "Specialty Coffee",
+    "claim": "Açaí, Matcha & Specialty Coffee mitten in Langen.",
+    "karte_button": "Zur Karte",
+    "bewertung_text": "Google-Bewertungen",
+    "becher": [
+      "Iced Strawberry Matcha mit grünem Matcha, Milch, Erdbeerpüree und Eiswürfeln",
+      "Açaí-Becher mit Mango-Maracuja-Schicht, belegt mit Erdbeeren, Banane und Kakao-Nibs",
+      "Açaí-Becher mit Granola und Kokoscreme, belegt mit Banane, Erdbeeren, Kiwi, Chia und Schokosauce",
+      "Rosa Erdbeer-Smoothie mit Erdbeerstücken und Strohhalm"
+    ]
   },
-  "galerie": {
-    "_hinweis": "PLATZHALTER: Alle Bilder dieser Galerie sind lizenzfreie Stockfotos von Pexels und zeigen NICHT das Restaurant. Bitte durch eigene Fotos ersetzen (Anleitung in LIES-MICH.md, Abschnitt Galerie).",
-    "titel": "Impressionen",
-    "text": "Gewürze, Tandoor, frisches Naan: ein erster Eindruck.",
-    "platzhalter_hinweis": "Platzhalter: Diese Stockfotos werden durch echte Fotos des Restaurants ersetzt.",
-    "platzhalter_label": "Platzhalter",
-    "bilder": [
+  "highlights": {
+    "titel": "Highlight",
+    "zutaten_titel": "Drin & drauf",
+    "preis_hinweis": "Beispielpreis",
+    "eintraege": [
       {
-        "bild": "assets/img/galerie/platzhalter-ambiente-1.jpg",
-        "format": "hoch",
-        "bildunterschrift": "Ambiente",
-        "beschreibung": "Gastraum eines indischen Restaurants mit grünen Sitzbänken und warmem Licht",
-        "ist_platzhalter": true,
-        "quelle": "Foto: Lakshmi Raj, Pexels, Pexels-Lizenz (kostenlos, auch kommerziell, ohne Namensnennung), https://www.pexels.com/photo/39068397/"
+        "id": "acai",
+        "name": "Karma Signature",
+        "kursiv": "Signature",
+        "untertitel": "Unser Açaí Cup, Schicht für Schicht.",
+        "beschreibung": "Gefrorenes Açaí im Wechsel mit Kokoscreme und knusprigem Granola. Oben Banane, Erdbeeren, Kiwi, ein Hauch Chia und Schokosauce.",
+        "zutaten": ["Açaí", "Kokoscreme", "Granola", "Banane", "Erdbeeren", "Kiwi", "Chia", "Schokosauce"],
+        "groesse": "0,4 l",
+        "preis": "8,90 €",
+        "hintergrundwort": "Açaí",
+        "bild_beschreibung": "Açaí-Becher mit Schichten aus Açaí, Kokoscreme und Granola, belegt mit Banane, Erdbeeren, Kiwi, Chia und Schokosauce"
       },
       {
-        "bild": "assets/img/galerie/platzhalter-gewuerzmarkt.jpg",
-        "format": "quer",
-        "bildunterschrift": "Gewürze",
-        "beschreibung": "Marktstand mit Bergen von bunten Gewürzen",
-        "ist_platzhalter": true,
-        "quelle": "Foto: AXP Photography, Pexels, Pexels-Lizenz (kostenlos, auch kommerziell, ohne Namensnennung), https://www.pexels.com/photo/19227962/"
-      },
-      {
-        "bild": "assets/img/galerie/platzhalter-tandoor.jpg",
-        "format": "hoch",
-        "bildunterschrift": "Tandoor",
-        "beschreibung": "Fladenbrote backen an der Wand eines Tandoor-Ofens über glühender Kohle",
-        "ist_platzhalter": true,
-        "quelle": "Foto: Valeria Boltneva, Pexels, Pexels-Lizenz (kostenlos, auch kommerziell, ohne Namensnennung), https://www.pexels.com/photo/32558924/"
-      },
-      {
-        "bild": "assets/img/galerie/platzhalter-naan.jpg",
-        "format": "quer",
-        "bildunterschrift": "Naan",
-        "beschreibung": "Frisches Naan und Roti in einem Brotkorb",
-        "ist_platzhalter": true,
-        "quelle": "Foto: Kunal Lakhotia, Pexels, Pexels-Lizenz (kostenlos, auch kommerziell, ohne Namensnennung), https://www.pexels.com/photo/28674556/"
-      },
-      {
-        "bild": "assets/img/galerie/platzhalter-ambiente-2.jpg",
-        "format": "hoch",
-        "bildunterschrift": "Tisch mit Wandbild",
-        "beschreibung": "Gedeckter Holztisch vor einem Scherenschnitt-Wandbild",
-        "ist_platzhalter": true,
-        "quelle": "Foto: Shyam Srivastava, Pexels, Pexels-Lizenz (kostenlos, auch kommerziell, ohne Namensnennung), https://www.pexels.com/photo/33321182/"
-      },
-      {
-        "bild": "assets/img/galerie/platzhalter-gedeckter-tisch.jpg",
-        "format": "quer",
-        "bildunterschrift": "Gedeckter Tisch",
-        "beschreibung": "Indische Gerichte, Reis und Brot auf einer gemusterten Tischdecke",
-        "ist_platzhalter": true,
-        "quelle": "Foto: khezez, Pexels, Pexels-Lizenz (kostenlos, auch kommerziell, ohne Namensnennung), https://www.pexels.com/photo/36799070/"
+        "id": "matcha",
+        "name": "Iced Strawberry Matcha",
+        "kursiv": "Matcha",
+        "untertitel": "Drei Schichten auf Eis.",
+        "beschreibung": "Unten Erdbeerpüree, in der Mitte kalte Milch, oben aufgeschlagener Ceremonial Matcha. Umrühren oder Schicht für Schicht trinken.",
+        "zutaten": ["Ceremonial Matcha", "Milch nach Wahl", "Erdbeerpüree", "Eis"],
+        "groesse": "0,4 l",
+        "preis": "5,90 €",
+        "hintergrundwort": "Matcha",
+        "bild_beschreibung": "Iced Strawberry Matcha mit grünem Matcha, weißer Milch und roter Erdbeerschicht, mit Eiswürfeln"
       }
     ]
   },
-  "gerichte": [
-    {
-      "name": "Butter Chicken",
-      "kursives_wort": "Butter",
-      "beschreibung": "Zartes Hähnchen in cremiger Tomaten-Butter-Sauce, dazu Naan.",
-      "preis": "14,50 €",
-      "effekt": "explosion",
-      "ueberschrift": "rechts",
-      "bild": "assets/img/butter-chicken.webp",
-      "bild_mobil": "assets/img/butter-chicken-m.webp",
-      "bild_explodiert": "assets/img/butter-chicken-explode.webp",
-      "bild_explodiert_mobil": "assets/img/butter-chicken-explode-m.webp",
-      "bild_beschreibung": "Butter Chicken in einer Kupferschale, daneben Naan-Brot",
-      "ki_generiert": true
-    },
-    {
-      "name": "Lamm Biryani",
-      "kursives_wort": "Biryani",
-      "beschreibung": "Basmatireis, geschmortes Lamm und ganze Gewürze.",
-      "preis": "15,90 €",
-      "effekt": "explosion",
-      "ueberschrift": "links",
-      "bild": "assets/img/biryani.webp",
-      "bild_mobil": "assets/img/biryani-m.webp",
-      "bild_explodiert": "assets/img/biryani-explode.webp",
-      "bild_explodiert_mobil": "assets/img/biryani-explode-m.webp",
-      "bild_beschreibung": "Lamm Biryani in einem Tontopf mit geöffnetem Deckel",
-      "ki_generiert": true
-    },
-    {
-      "name": "Saag Paneer",
-      "kursives_wort": "Paneer",
-      "beschreibung": "Paneer-Käse in würzigem Spinat, mit Kreuzkümmel.",
-      "preis": "14,50 €",
-      "effekt": "kreis",
-      "ueberschrift": "rechts",
-      "bild": "assets/img/saag-paneer.webp",
-      "bild_mobil": "assets/img/saag-paneer-m.webp",
-      "bild_explodiert": "",
-      "bild_explodiert_mobil": "",
-      "bild_beschreibung": "Saag Paneer in einer Messingschale, daneben Kreuzkümmel",
-      "ki_generiert": true
-    }
-  ],
+  "impressionen": {
+    "titel": "Impressionen",
+    "text": "Açaí, Matcha, Smoothies und Kaffee: so schmeckt ein guter Tag.",
+    "instagram_text": "Echte Fotos aus dem Café auf Instagram",
+    "bilder": [
+      { "bild": "assets/impressionen/karma-01-smoothie-trio.webp", "format": "hoch", "bildunterschrift": "Frisch geschichtet", "beschreibung": "Drei geschichtete Smoothies mit Banane, Mango und Granola in Gläsern" },
+      { "bild": "assets/impressionen/karma-02-matcha-latte.webp", "format": "hoch", "bildunterschrift": "Matcha Latte", "beschreibung": "Grüner Matcha Latte mit Milchschaum-Muster, von oben fotografiert" },
+      { "bild": "assets/impressionen/karma-03-iced-latte.webp", "format": "hoch", "bildunterschrift": "Iced Latte", "beschreibung": "Iced Latte mit Eiswürfeln und Strohhalm auf einem Holztisch" },
+      { "bild": "assets/impressionen/karma-04-cappuccino.webp", "format": "hoch", "bildunterschrift": "Cappuccino", "beschreibung": "Cappuccino mit Latte Art in einer blauen Tasse auf Untertasse" },
+      { "bild": "assets/impressionen/karma-05-erdbeer-smoothie.webp", "format": "hoch", "bildunterschrift": "Erdbeer-Smoothie", "beschreibung": "Rosa Erdbeer-Smoothie im Glas mit einer Erdbeere am Rand" },
+      { "bild": "assets/impressionen/karma-06-latte-art.webp", "format": "hoch", "bildunterschrift": "Latte Art", "beschreibung": "Hände gießen Milchschaum in eine Tasse Kaffee und formen ein Muster" }
+    ]
+  },
   "speisekarte": {
-    "titel": "Speisekarte",
-    "einleitung": "Elf Kategorien, hier jeweils mit dem Einstiegspreis.",
-    "preis_vorsilbe": "ab",
+    "titel": "Die Karte",
+    "einleitung": "Ein Auszug aus dem, was es bei uns gibt.",
+    "hinweis": "Beispielkarte: Auswahl und Preise sind beispielhaft und können vor Ort abweichen.",
     "kategorien": [
       {
-        "name": "Suppen",
-        "preis": "6,50 €"
+        "id": "cups",
+        "name": "Açaí Cups",
+        "eintraege": [
+          { "name": "Karma Signature", "beschreibung": "Açaí, Kokoscreme, Granola, Banane, Erdbeeren, Kiwi, Schokosauce", "preis": "8,90 €", "bild": "assets/img/karte/cup-karma.webp" },
+          { "name": "Mango Passion", "beschreibung": "Açaí, Mango-Maracuja, Banane, Erdbeeren, Kakao-Nibs", "preis": "8,40 €", "bild": "assets/img/karte/cup-mango.webp" },
+          { "name": "Classic", "beschreibung": "Açaí, Kokos-Swirl, Blaubeeren, Erdbeeren, Kokos", "preis": "7,90 €", "bild": "assets/img/karte/cup-classic.webp" },
+          { "name": "Caramel Crunch", "beschreibung": "Açaí, Karamell, Vanille-Topping, Mandeln", "preis": "8,40 €", "bild": "assets/img/karte/cup-caramel.webp" },
+          { "name": "Peanut Power", "beschreibung": "Açaí, Chiapudding, Erdnussbutter, Beeren", "preis": "8,90 €", "bild": "assets/img/karte/cup-peanut.webp" },
+          { "name": "Berry Blast", "beschreibung": "Açaí, Chia, Erdbeeren, Blaubeeren, Kakao-Nibs", "preis": "8,40 €", "bild": "assets/img/karte/cup-berry.webp" }
+        ]
       },
       {
-        "name": "Vorspeisen",
-        "preis": "7,50 €"
+        "id": "eigener-cup",
+        "name": "Eigener Cup",
+        "eintraege": [
+          { "name": "Açaí & Kokos", "beschreibung": "Açaí mit Kokos-Swirl, dazu zwei Toppings nach Wahl", "preis": "7,20 €", "bild": "assets/img/karte/cup-base-kokos.webp" },
+          { "name": "Açaí & Karamell", "beschreibung": "Açaí mit Karamell-Swirl, dazu zwei Toppings nach Wahl", "preis": "7,20 €", "bild": "assets/img/karte/cup-base-karamell.webp" },
+          { "name": "Açaí & Chia", "beschreibung": "Açaí mit Chiapudding, dazu zwei Toppings nach Wahl", "preis": "7,50 €", "bild": "assets/img/karte/cup-base-chia.webp" }
+        ]
       },
       {
-        "name": "Indische Brote",
-        "preis": "2,00 €"
+        "id": "smoothies",
+        "name": "Smoothies",
+        "eintraege": [
+          { "name": "Green Glow", "beschreibung": "Spinat, Apfel, Banane, Ingwer, Limette", "preis": "6,50 €", "bild": "assets/img/karte/smoothie-green.webp" },
+          { "name": "Pink Karma", "beschreibung": "Erdbeere, Himbeere, Banane, Hafermilch", "preis": "6,50 €", "bild": "assets/img/karte/smoothie-pink.webp" },
+          { "name": "Mango Sunrise", "beschreibung": "Mango, Maracuja, Orange, Kokoswasser", "preis": "6,50 €", "bild": "assets/img/karte/smoothie-mango.webp" }
+        ]
       },
       {
-        "name": "Vegetarisch",
-        "preis": "14,50 €"
+        "id": "matcha",
+        "name": "Matcha & Drinks",
+        "eintraege": [
+          { "name": "Iced Strawberry Matcha", "beschreibung": "Erdbeerpüree, Milch, Ceremonial Matcha", "preis": "5,90 €", "bild": "assets/img/karte/drink-strawberry-matcha.webp" },
+          { "name": "Iced Matcha Latte", "beschreibung": "Ceremonial Matcha auf Milch und Eis", "preis": "5,20 €", "bild": "assets/img/karte/drink-iced-matcha.webp" },
+          { "name": "Matcha Latte", "beschreibung": "Heiß, mit Milch nach Wahl", "preis": "4,90 €", "bild": "assets/img/karte/drink-matcha-latte.webp" },
+          { "name": "Chai Latte", "beschreibung": "Gewürzter Schwarztee mit Milch und Zimt", "preis": "4,60 €", "bild": "assets/img/karte/drink-chai.webp" }
+        ]
       },
       {
-        "name": "Chicken",
-        "preis": "14,50 €"
+        "id": "kaffee",
+        "name": "Kaffee",
+        "eintraege": [
+          { "name": "Espresso", "beschreibung": "Specialty Roast, doppelt", "preis": "2,60 €", "bild": "assets/img/karte/coffee-espresso.webp" },
+          { "name": "Cappuccino", "beschreibung": "Espresso, Milchschaum, Latte Art", "preis": "3,80 €", "bild": "assets/img/karte/coffee-cappuccino.webp" },
+          { "name": "Flat White", "beschreibung": "Doppelter Espresso, wenig Milch", "preis": "4,20 €", "bild": "assets/img/karte/coffee-flatwhite.webp" },
+          { "name": "Iced Latte", "beschreibung": "Espresso auf Milch und Eis", "preis": "4,50 €", "bild": "assets/img/karte/coffee-iced-latte.webp" }
+        ]
       },
       {
-        "name": "Ente",
-        "preis": "16,90 €"
-      },
-      {
-        "name": "Lamm",
-        "preis": "15,50 €"
-      },
-      {
-        "name": "Meeresfrüchte",
-        "preis": "17,50 €"
-      },
-      {
-        "name": "Biryani",
-        "preis": "14,90 €"
-      },
-      {
-        "name": "Desserts",
-        "preis": "3,90 €"
-      },
-      {
-        "name": "Getränke",
-        "preis": "2,50 €"
+        "id": "extras",
+        "name": "Extras & Toppings",
+        "eintraege": [
+          { "name": "Granola", "beschreibung": "Hausgemacht, knusprig", "preis": "0,80 €", "bild": "assets/img/karte/extra-granola.webp" },
+          { "name": "Erdnussbutter", "beschreibung": "Cremig, ohne Zuckerzusatz", "preis": "1,00 €", "bild": "assets/img/karte/extra-peanut.webp" },
+          { "name": "Kokoschips", "beschreibung": "Geröstet", "preis": "0,70 €", "bild": "assets/img/karte/extra-coconut.webp" },
+          { "name": "Frische Früchte", "beschreibung": "Beeren, Banane, Mango", "preis": "1,20 €", "bild": "assets/img/karte/extra-fruit.webp" }
+        ]
       }
-    ],
-    "hinweis": "Einstiegspreise je Kategorie. Alle Gerichte und aktuellen Preise stehen bei Lieferando.",
-    "button_text": "Ganze Karte bei Lieferando"
-  },
-  "bewertungen": {
-    "titel": "Bewertungen",
-    "sterne_text": "Sterne bei Google",
-    "platzhalter_hinweis": "Platzhalter: Diese drei Stimmen werden durch echte Google-Bewertungen ersetzt.",
-    "eintraege": [
-      {
-        "text": "Platzhalter für eine echte Google-Bewertung. Hier steht später ein kurzes Zitat eines Gastes.",
-        "name": "Platzhalter",
-        "sterne": 5,
-        "ist_platzhalter": true
-      },
-      {
-        "text": "Platzhalter für eine zweite Google-Bewertung, am besten zwei bis drei Sätze lang.",
-        "name": "Platzhalter",
-        "sterne": 5,
-        "ist_platzhalter": true
-      },
-      {
-        "text": "Platzhalter für eine dritte Google-Bewertung, zum Beispiel über den Lieferservice.",
-        "name": "Platzhalter",
-        "sterne": 5,
-        "ist_platzhalter": true
-      }
-    ],
-    "google_link_text": "Alle Rezensionen bei Google",
-    "platzhalter_label": "Platzhalter"
+    ]
   },
   "oeffnungszeiten": {
     "titel": "Öffnungszeiten",
+    "zusammenfassung": "Täglich 9–19 Uhr",
     "tage": [
-      {
-        "tag": "Montag",
-        "zeiten": [
-          "11:30-14:30",
-          "16:30-22:00"
-        ]
-      },
-      {
-        "tag": "Dienstag",
-        "zeiten": [
-          "11:30-14:30",
-          "16:30-22:00"
-        ]
-      },
-      {
-        "tag": "Mittwoch",
-        "zeiten": []
-      },
-      {
-        "tag": "Donnerstag",
-        "zeiten": [
-          "11:30-14:30",
-          "16:30-22:00"
-        ]
-      },
-      {
-        "tag": "Freitag",
-        "zeiten": [
-          "11:30-14:30",
-          "16:30-22:00"
-        ]
-      },
-      {
-        "tag": "Samstag",
-        "zeiten": [
-          "11:30-14:30",
-          "16:30-22:00"
-        ]
-      },
-      {
-        "tag": "Sonntag",
-        "zeiten": [
-          "11:30-14:30",
-          "16:30-22:00"
-        ]
-      }
+      { "tag": "Montag", "zeiten": ["09:00-19:00"] },
+      { "tag": "Dienstag", "zeiten": ["09:00-19:00"] },
+      { "tag": "Mittwoch", "zeiten": ["09:00-19:00"] },
+      { "tag": "Donnerstag", "zeiten": ["09:00-19:00"] },
+      { "tag": "Freitag", "zeiten": ["09:00-19:00"] },
+      { "tag": "Samstag", "zeiten": ["09:00-19:00"] },
+      { "tag": "Sonntag", "zeiten": ["09:00-19:00"] }
     ],
-    "geschlossen_text": "Ruhetag",
-    "heute_text": "Heute",
-    "jetzt_geoeffnet_text": "Jetzt geöffnet",
-    "jetzt_geschlossen_text": "Gerade geschlossen",
-    "uhr_text": "Uhr",
-    "bis_text": "bis",
-    "oeffnet_heute_um_text": "öffnet heute um"
+    "geschlossen_text": "geschlossen"
   },
-  "standort": {
-    "titel": "So finden Sie uns",
-    "anrufen_button": "Anrufen",
-    "route_button": "Route planen"
-  },
-  "abschluss": {
-    "titel": "Bestellen oder reservieren.",
-    "kursives_wort": "reservieren",
-    "text": "Zum Abholen, per Lieferung oder mit Tisch vor Ort.",
-    "bestellen_button": "Jetzt bestellen",
-    "anrufen_button": "Anrufen & reservieren"
+  "besuch": {
+    "kicker": "Besuch uns",
+    "titel": "Komm vorbei.",
+    "kursiv": "vorbei.",
+    "text": "Mitten in Langen, ein paar Schritte vom Bahnhof. Zum Mitnehmen oder für eine Pause am Fenster.",
+    "route_button": "Route planen",
+    "instagram_button": "Instagram",
+    "bewertung_text": "bei Google",
+    "bewertungen_wort": "Bewertungen"
   },
   "footer": {
     "impressum_text": "Impressum",
     "impressum_link": "impressum.html",
     "datenschutz_text": "Datenschutz",
     "datenschutz_link": "datenschutz.html",
-    "copyright": "© 2026 Taste of India, Kassel"
+    "copyright": "© 2026 Karma Specialty Coffee",
+    "demo_hinweis": "Demo-Website. Preise und Speisekarte sind Beispielinhalte."
+  },
+  "bildkennzeichnung": {
+    "bild_text": "Symbolbild",
+    "footer_text_anzeigen": true,
+    "footer_text": "Die Becher im Hero und bei den Highlights sind Symbolbilder. Die Fotos unter „Impressionen“ sind gemeinfreie Stimmungsbilder (CC0), nicht aus dem Café. Die Vorschaubilder der Signature Cups sind echte Fotos aus dem Café, die übrigen Vorschaubilder der Karte sind 3D-Visualisierungen."
   },
   "bedienhilfen": {
     "zum_inhalt_springen": "Zum Inhalt springen",
     "hauptnavigation": "Hauptnavigation",
-    "sterne_von_fuenf": "von 5 Sternen",
-    "startseite": "Zur Startseite",
-    "galerie_label": "Bildergalerie, seitlich scrollbar"
+    "galerie_label": "Stimmungsbilder",
+    "laden": "Lädt",
+    "sterne_label": "von 5 Sternen"
   }
 }

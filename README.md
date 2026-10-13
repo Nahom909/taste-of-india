@@ -1,7 +1,20 @@
-# Taste of India, Kassel – Website
+# Karma Specialty Coffee, Langen – Demo-Website
 
-One-Pager für das indische Restaurant **Taste of India**, Wolfhager Str. 415, 34128 Kassel.
-Filmische Scroll-Website: Beim Scrollen führt eine Kamerafahrt durch die Gerichte.
+One-Pager für **Karma Specialty Coffee**, Bahnstraße 4, 63225 Langen (Hessen).
+
+## Abschnitte
+
+| # | Abschnitt | Inhalt und Bewegung |
+|---|---|---|
+| 1 | Hero | „Karma / Specialty Coffee“ in goldener 3D-Schrift (reines CSS: mattes Gold + gestaffelte Schatten), darunter die vier Becher aus dem Bild des Auftraggebers. Schrift und Becher blenden beim Laden einmal ein; auf dem Handy stehen die Becher zwei mal zwei |
+| 2 | Highlight **Açaí** | Lila Fläche, Becher 3 (Karma Signature) mit Beschreibung, Zutaten und Beispielpreis in Gold; Becher und Text blenden beim Scrollen ein, das große Hintergrundwort gleitet |
+| 3 | Highlight **Matcha** | Grüne Fläche, Becher 1 (Iced Strawberry Matcha), gespiegelt aufgebaut |
+| 4 | Speisekarte | Beispielkarte mit sechs Kategorien, Vorschaubildern und mitlaufenden Kategorie-Tabs |
+| 5 | Impressionen | Gemeinfreie Stimmungsbilder (CC0) im versetzten Editorial-Raster mit Parallax |
+| 6 | Besuch | Adresse, Öffnungszeiten mit „Heute geöffnet bis …“, Google-Bewertung, Instagram, Route |
+
+Es gibt keine gepinnten Becher-Szenen mehr. Animiert werden ausschließlich `transform` und `opacity`.
+Bei „Bewegung reduzieren“ ist alles sofort und unbewegt sichtbar.
 
 ## Aufbau
 
@@ -9,43 +22,87 @@ Filmische Scroll-Website: Beim Scrollen führt eine Kamerafahrt durch die Gerich
 |---|---|
 | `index.html` | Seitengerüst ohne Inhaltstexte |
 | `content.json` | **Alle Texte, Preise, Öffnungszeiten, Links und Bildpfade** |
-| `LIES-MICH.md` | Anleitung für den Inhaber: Texte ändern, Bilder tauschen, hochladen |
-| `assets/js/content.js` | Lädt `content.json`, setzt die Inhalte ein, Fallback bei Fehlern |
-| `assets/js/content-fallback.js` | Sicherheitskopie der Texte (greift, wenn `content.json` fehlerhaft ist) |
-| `assets/js/motion.js` | Scroll-Choreografie mit GSAP, ScrollTrigger und Lenis |
-| `assets/css/style.css` | Gestaltung (Farben und Schriften als Variablen ganz oben) |
-| `assets/fonts/` | Fraunces und Hanken Grotesk, selbst gehostet und auf Deutsch/Latein reduziert |
-| `assets/img/` | Bilder (WebP, jeweils mit `-m`-Version fürs Handy) |
-| `assets/vendor/` | GSAP 3.13, ScrollTrigger, Lenis 1.3 (lokal, keine CDN-Verbindung) |
+| `LIES-MICH.md` | Anleitung für das Café: Texte ändern, Bilder tauschen, hochladen |
+| `BILDQUELLEN.md` | Quelle, Urheber und Lizenz jedes Bildes, jeder Schrift und Bibliothek |
+| `assets/js/content.js` | Lädt `content.json`, setzt die Inhalte ein, Öffnungsstatus nach deutscher Zeit |
+| `assets/js/content-fallback.js` | Sicherheitskopie der Texte (erzeugt mit `node tools/build-fallback.mjs`) |
+| `assets/js/motion.js` | Einblendungen (GSAP, ScrollTrigger, SplitText, Lenis) |
+| `assets/css/style.css` | Gestaltung; Farben, Schriften und Abstände als Variablen ganz oben |
+| `assets/hero/` | Die vier freigestellten Becher (Hero und Highlights) |
+| `assets/img/karte/` | Vorschaubilder der Speisekarte |
+| `assets/impressionen/` | Stimmungsbilder (CC0, Nachweis in BILDQUELLEN.md) |
+| `assets/fonts/` | Bodoni Moda, Instrument Sans (selbst gehostet, Latein-Zeichensatz) |
+| `assets/vendor/` | GSAP 3.15 (inkl. ScrollTrigger, SplitText), Lenis 1.3 (lokal, keine CDN-Verbindung) |
 | `impressum.html`, `datenschutz.html` | **Platzhalter**, vor Veröffentlichung ausfüllen |
+| `.htaccess` | Server-Einstellungen für Apache: Kompression, Cache, Sicherheits-Header |
+| `tools/` | Render- und Build-Skripte (siehe unten) |
 
-## Szenen
+## DSGVO
 
-1. **Hero**: Gewürze, Headline baut sich Buchstabe für Buchstabe auf, Kamera zoomt in die Gewürze
-2. **Impressionen**: horizontale Galerie (Desktop gepinnt, Handy wischbar)
-3. **Butter Chicken** und **Lamm Biryani**: fertiges Gericht blendet weich ins explodierte Bild über, Zutaten fliegen in Tiefenebenen auseinander
-4. **Saag Paneer**: Bild öffnet sich aus einem Kreis, dreht sich und wandert zur Seite
-5. Speisekarte, Bewertungen, Standort & Öffnungszeiten, Abschluss, Footer
-
-Bei „Bewegung reduzieren“ im System werden alle Szenen statisch gezeigt.
+- Keine Cookies, kein Tracking, keine Analyse, keine eingebetteten Karten, Instagram- oder Google-Widgets.
+- Schriften, Bilder und Skripte liegen alle lokal; beim Aufruf wird kein fremder Server kontaktiert.
+- Instagram und Google Maps sind nur normale Links. Deshalb ist kein Cookie-Banner nötig.
 
 ## Lokal ansehen
 
-Die Seite liest `content.json` per `fetch`, deshalb über einen kleinen Webserver öffnen
-(nicht per Doppelklick auf `index.html`):
+Die Seite liest `content.json` per `fetch`, deshalb über einen kleinen Webserver öffnen:
 
 ```
-python -m http.server 8781
+python3 -m http.server 8790
 ```
 
-Dann `http://localhost:8781` im Browser öffnen.
+Dann `http://localhost:8790` im Browser öffnen.
 
-## Wichtige Hinweise
+## Becher neu erzeugen (z. B. aus einem neuen Gesamtbild)
 
-- **KI-Bilder:** Alle Food- und Gewürzbilder sind KI-generierte Symbolbilder. Jedes Bild trägt die
-  Kennzeichnung „KI-generiertes Symbolbild“, im Footer steht ein Hinweis. Beides ist in `content.json` abschaltbar.
-- **Platzhalter:** Die Galerie „Impressionen“ zeigt lizenzfreie Stockfotos von Pexels (Quellen im Kommentar in
-  `index.html` und im Feld `quelle` in `content.json`). Die drei Bewertungen sind ebenfalls Platzhalter.
-- **Preise** der Signature-Gerichte und die Einstiegspreise der Speisekarte vom Inhaber bestätigen lassen.
-- Nach Änderungen an CSS oder JavaScript die Versionsnummer `?v=` in `index.html` hochzählen,
-  damit Browser nicht die alte Version aus dem Cache zeigen.
+Das Quellbild liegt nicht im Repository (`_work/hero/src.png`, vier Becher nebeneinander auf hellem Grund).
+
+```
+pip install rembg onnxruntime pillow numpy scipy
+python3 tools/hero/build.py cut   # freistellen (lokal, Modell birefnet-general, ca. 3 Minuten)
+python3 tools/hero/build.py       # vier Becher nach assets/hero/, Karten-Vorschaubilder, og-image.jpg
+```
+
+Für das Vorschaubild braucht das Skript die TTF-Schriften aus `python3 tools/textures/fonts.py` (in `_work/fonts/`).
+
+## 3D-Karten-Motive neu erzeugen (optional)
+
+Die übrigen Karten-Motive (Smoothies, Drinks, Kaffee, Extras) sind 3D-Visualisierungen, gerendert mit Blender 5.0 (Cycles, CPU) über das Python-Modul `bpy`.
+
+```
+npm install                          # Schriften, GSAP, Lenis, Icons
+node tools/vendor.mjs                # Schriften und Bibliotheken nach assets/ kopieren
+pip install bpy==5.0.1 pillow fonttools brotli numpy
+python3 tools/textures/fonts.py      # Schriften für die Texturen
+python3 tools/textures/make_logo.py  # Becheraufdruck „THISISYOUR karma“
+python3 tools/textures/make_food_tex.py && python3 tools/textures/make_latte_tex.py
+python3 tools/blender/pipeline.py matcha
+python3 tools/blender/menu.py                  # Speisekarten-Motive
+python3 tools/blender/project_points.py        # Bildkoordinaten der Matcha-Schichten
+python3 tools/build-assets.py matcha karte     # PNG -> WebP + manifest.json
+python3 tools/inject-sprite.py                 # Icon-Sprite und Wortmarke in index.html
+```
+
+Die Szenen liegen in `tools/blender/` (`klib.py` enthält Becher, Füllungen, Toppings, Materialien, Licht und Kamera).
+Mit `KARMA_TEST=1 python3 tools/blender/pipeline.py <szene> schnell` gibt es einen Schnelltest in Mini-Auflösung.
+
+## Ergebnisse der Prüfung (Oktober 2026, Fassung mit Hero und Highlights)
+
+Lighthouse 12 gegen `tools/serve.mjs` (verhält sich wie der Webhoster mit `.htaccess`: Kompression, Cache-Header, CSP), je zwei Läufe:
+
+| | Performance | Barrierefreiheit | Best Practices | SEO | LCP | CLS |
+|---|---|---|---|---|---|---|
+| Desktop | 100 | 100 | 100 | 100 | 0,7 s | 0,003 |
+| Handy (gedrosselt) | 95 | 100 | 100 | 100 | 2,5 s | 0,001 |
+
+- Konsole: keine Fehler und keine Warnungen; **keine einzige Anfrage an fremde Server** (geprüft mit `tools/shoot.mjs`,
+  Desktop, Handy und „Bewegung reduzieren“).
+- Übertragung für die ganze Seite: ca. 1 MB.
+
+## Qualitätsprüfung
+
+- `node tools/shoot.mjs desktop|mobile|reduced <ordner>`: Screenshots der ganzen Seite, Konsolenfehler, fremde Anfragen
+- `node tools/serve.mjs 8791`: lokaler Testserver mit Kompression und Cache-Headern wie in `.htaccess`
+- Nach Änderungen an CSS oder JavaScript die Versionsnummer `?v=` in `index.html` hochzählen (aktuell `?v=7`).
+- `.htaccess` (Apache): Kompression, Browser-Cache, Content-Security-Policy (nur eigene Dateien erlaubt). Beim Hochladen
+  mitkopieren, sie ist eine versteckte Datei. Bei nginx-Hostern die Regeln entsprechend übertragen.
