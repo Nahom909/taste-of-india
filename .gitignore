@@ -1,11 +1,6 @@
-# Temporäre Test- und Vergleichsdateien
-_*_tmp.html
-_vergleich-*.html
-
-# PNG-Originale der KI-Bilder (die Website nutzt die WebP-Versionen)
-assets/img/*.png
-
-# Betriebssystem
-Thumbs.db
-desktop.ini
+node_modules
+_work/
+reference/
+*.log
 .DS_Store
+__pycache__/
